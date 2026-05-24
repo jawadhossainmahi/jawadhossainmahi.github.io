@@ -1,0 +1,264 @@
+{
+    "meta": {
+        "name": "Jawad Hossain Mahi",
+        "title": "Full Stack Developer",
+        "tagline": "Full Stack Developer from Bangladesh. Building scalable web apps with React, Laravel, and modern tools.",
+        "logo": "<JHM/>",
+        "available": true,
+        "availableText": "Available for freelance work",
+        "location": "Narayanganj, Bangladesh",
+        "employer": "Webshinez Technologies",
+        "cgpa": "3.49",
+        "yearsExp": "2+",
+        "projects": "10+",
+        "frameworks": "5+"
+    },
+    "typewriter": [
+        "Full Stack Developer",
+        "React.js Enthusiast",
+        "Laravel Engineer",
+        "UI/UX Craftsman",
+        "Clean Code Advocate"
+    ],
+    "bio": [
+        "I'm a <span class=\"text-text font-medium\">Full Stack Developer</span> based in Narayanganj, Bangladesh, currently pursuing my B.Sc. in Computer Science & Engineering at Green University of Bangladesh. I build fast, scalable, and visually refined web applications from end to end.",
+        "My stack spans from <span class=\"text-accent font-mono\">React.js</span> and <span class=\"text-accent font-mono\">Tailwind CSS</span> on the frontend to <span class=\"text-accent font-mono\">Laravel</span> and <span class=\"text-accent font-mono\">CodeIgniter</span> on the backend. I enjoy the challenge of making systems that are both technically sound and great to use.",
+        "Outside work, I explore Flutter for mobile, experiment with real-time systems using WebSockets, and continuously expand my expertise in full-stack patterns and architecture."
+    ],
+    "tags": [
+        "🇧🇩 Bangladesh",
+        "🎓 CSE Student",
+        "💼 Open to Work",
+        "⚡ Full Stack"
+    ],
+    "social": [
+        {
+            "label": "GitHub",
+            "short": "GH",
+            "url": "https://github.com/jawadhossainmahi"
+        },
+        {
+            "label": "LinkedIn",
+            "short": "LI",
+            "url": "https://www.linkedin.com/in/jawadhossainmahi/"
+        },
+        {
+            "label": "Facebook",
+            "short": "FB",
+            "url": "https://www.facebook.com/jawadhossainmahi/"
+        },
+        {
+            "label": "Instagram",
+            "short": "IG",
+            "url": "https://www.instagram.com/jawadhossainmahi"
+        }
+    ],
+    "timeline": [
+        {
+            "period": "2023 — Present",
+            "role": "Full Stack Developer",
+            "org": "Webshinez Technologies · Narayanganj",
+            "desc": "Building and maintaining production web apps. Led development of institutional platforms and LMS systems.",
+            "color": "accent"
+        },
+        {
+            "period": "2024 — 2028",
+            "role": "B.Sc. Computer Science & Engineering",
+            "org": "Green University of Bangladesh",
+            "desc": "CGPA: 3.44 | Currently in 2nd Year",
+            "color": "accent2"
+        },
+        {
+            "period": "2023",
+            "role": "HSC — Science",
+            "org": "Narayanganj College · GPA 4.83/5.0",
+            "desc": "",
+            "color": "border"
+        },
+        {
+            "period": "2021",
+            "role": "SSC — Science",
+            "org": "Adarsha School · GPA 4.83/5.0",
+            "desc": "",
+            "color": "border"
+        }
+    ],
+    "skillGroups": [
+        {
+            "icon": "🎨",
+            "label": "Frontend",
+            "color": "accent",
+            "skills": [
+                {
+                    "name": "React.js",
+                    "pct": 90
+                },
+                {
+                    "name": "Tailwind CSS",
+                    "pct": 92
+                },
+                {
+                    "name": "JavaScript",
+                    "pct": 85
+                },
+                {
+                    "name": "GSAP Animations",
+                    "pct": 75
+                },
+                {
+                    "name": "Next.js",
+                    "pct": 70
+                }
+            ]
+        },
+        {
+            "icon": "⚙️",
+            "label": "Backend",
+            "color": "accent2",
+            "skills": [
+                {
+                    "name": "Laravel",
+                    "pct": 88
+                },
+                {
+                    "name": "PHP",
+                    "pct": 85
+                },
+                {
+                    "name": "CodeIgniter",
+                    "pct": 80
+                },
+                {
+                    "name": "REST APIs",
+                    "pct": 85
+                },
+                {
+                    "name": "FastAPI",
+                    "pct": 65
+                }
+            ]
+        },
+        {
+            "icon": "🛠",
+            "label": "Tools & DB",
+            "color": "green",
+            "skills": [
+                {
+                    "name": "MySQL",
+                    "pct": 88
+                },
+                {
+                    "name": "Git & GitHub",
+                    "pct": 85
+                },
+                {
+                    "name": "WebSockets",
+                    "pct": 78
+                },
+                {
+                    "name": "Flutter",
+                    "pct": 65
+                },
+                {
+                    "name": "MongoDB",
+                    "pct": 60
+                }
+            ]
+        }
+    ],
+    "techTags": [
+        "C / C++",
+        "Python",
+        "Angular.js",
+        "jQuery",
+        "Bootstrap",
+        "AJAX",
+        "Livewire",
+        "Axios",
+        "Popper.js",
+        "Yajra DataTable",
+        "Laravel Reverb",
+        "Swiper",
+        "Owl Carousel"
+    ],
+    "projects": [
+        {
+            "icon": "🕌",
+            "title": "Markaj U Talimis Sunnah",
+            "desc": "Full-stack institutional website with interactive frontend. Laravel backend + Vite React with rich UI components including Swiper and Owl Carousel.",
+            "tags": [
+                "React.js",
+                "Laravel",
+                "Bootstrap",
+                "jQuery"
+            ],
+            "github": "https://github.com/jawadhossainmahi",
+            "gradient": "from-accent to-accent2"
+        },
+        {
+            "icon": "💼",
+            "title": "Webshinez Technologies Website",
+            "desc": "Modern responsive company website with GSAP-powered animations, smooth scroll, and LightGallery integration for optimized media presentation.",
+            "tags": [
+                "React.js",
+                "Tailwind CSS",
+                "GSAP"
+            ],
+            "github": "https://github.com/jawadhossainmahi",
+            "gradient": "from-accent2 to-purple-500"
+        },
+        {
+            "icon": "🎓",
+            "title": "EduSelf LMS",
+            "desc": "Laravel-based School Management System with student dashboards, authentication, exam modules, accounting, homework, and HRM portals.",
+            "tags": [
+                "Laravel",
+                "Bootstrap",
+                "Yajra"
+            ],
+            "github": "https://github.com/Eduself-V2",
+            "gradient": "from-green-500 to-accent"
+        },
+        {
+            "icon": "💬",
+            "title": "Laravel Real-Time Chat",
+            "desc": "Private chat system using Laravel 12, Livewire 3, and Laravel Reverb with live messaging, typing indicators, and WebSocket broadcasting.",
+            "tags": [
+                "Laravel",
+                "Livewire",
+                "Reverb"
+            ],
+            "github": "https://github.com/jawadhossainmahi/laravel-chat-system",
+            "gradient": "from-orange-500 to-red-500"
+        },
+        {
+            "icon": "📋",
+            "title": "OMR Sheet Generator",
+            "desc": "Generate customizable OMR sheets with QR codes for smartphone scanning. Built for educational institutions requiring efficient data collection.",
+            "tags": [
+                "HTML",
+                "JavaScript",
+                "QR Code"
+            ],
+            "github": "https://github.com/jawadhossainmahi/Omr-Sheet-Generate",
+            "gradient": "from-blue-500 to-cyan-500"
+        },
+        {
+            "icon": "📱",
+            "title": "Flutter + FastAPI CRUD",
+            "desc": "Full-stack mobile app with Flutter frontend and FastAPI backend. Demonstrates modular CRUD patterns across mobile and Python backend.",
+            "tags": [
+                "Flutter",
+                "FastAPI",
+                "Python"
+            ],
+            "github": "https://github.com/jawadhossainmahi/flutter-fastapi-basic-crud",
+            "gradient": "from-pink-500 to-accent2"
+        }
+    ],
+    "contact": {
+        "location": "Narayanganj, Bangladesh",
+        "employer": "Webshinez Technologies",
+        "cta": "The best way to reach me is through LinkedIn or by checking my GitHub. I'm usually pretty quick to respond!"
+    }
+}
