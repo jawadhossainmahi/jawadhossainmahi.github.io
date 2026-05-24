@@ -1,48 +1,1225 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="en" class="scroll-smooth">
+
+<head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Jawad Hossain Mahi | Full Stack Developer & CSE Student — Bangladesh</title>
-    <meta name="description" content="Portfolio of Jawad Hossain Mahi, a Full Stack Developer specializing in Laravel, PHP, Flutter and modern web technologies from Narayanganj, Bangladesh." />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://jawadhossainmahi.com/" />
-    
-    <meta property="og:title" content="Jawad Hossain Mahi | Full Stack Developer" />
-    <meta property="og:description" content="Portfolio of Jawad Hossain Mahi, a Full Stack Developer specializing in Laravel, PHP, Flutter and modern web technologies from Narayanganj, Bangladesh." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://jawadhossainmahi.com/" />
-    
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Jawad Hossain Mahi | Full Stack Developer" />
-    <meta name="twitter:description" content="Portfolio of Jawad Hossain Mahi, a Full Stack Developer specializing in Laravel, PHP, Flutter and modern web technologies from Narayanganj, Bangladesh." />
-    
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Jawad Hossain Mahi",
-      "jobTitle": "Full Stack Developer",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Narayanganj",
-        "addressCountry": "Bangladesh"
-      },
-      "url": "https://jawadhossainmahi.com",
-      "sameAs": [
-        "https://github.com/jawadhossainmahi"
-      ]
-    }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jawad Hossain Mahi — Full Stack Developer</title>
+    <meta name="description"
+        content="Full Stack Developer from Bangladesh. Building scalable web apps with React, Laravel, and modern tools." />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Marked.js for Markdown -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+    <!-- Highlight.js for code blocks -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Syne', 'sans-serif'],
+                        mono: ['Space Mono', 'monospace'],
+                        body: ['DM Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        bg: '#080c10',
+                        surface: '#0d1117',
+                        card: '#111827',
+                        border: '#1f2937',
+                        accent: '#00d4aa',
+                        accent2: '#6366f1',
+                        muted: '#6b7280',
+                        text: '#e2e8f0',
+                        subtle: '#94a3b8',
+                    },
+                    animation: {
+                        'fade-up': 'fadeUp 0.6s ease forwards',
+                        'fade-in': 'fadeIn 0.5s ease forwards',
+                        'slide-right': 'slideRight 0.6s ease forwards',
+                        'blink': 'blink 1s step-end infinite',
+                        'float': 'float 4s ease-in-out infinite',
+                        'shimmer': 'shimmer 2s linear infinite',
+                    },
+                    keyframes: {
+                        fadeUp: { '0%': { opacity: 0, transform: 'translateY(30px)' }, '100%': { opacity: 1, transform: 'translateY(0)' } },
+                        fadeIn: { '0%': { opacity: 0 }, '100%': { opacity: 1 } },
+                        slideRight: { '0%': { opacity: 0, transform: 'translateX(-30px)' }, '100%': { opacity: 1, transform: 'translateX(0)' } },
+                        blink: { '0%,100%': { opacity: 1 }, '50%': { opacity: 0 } },
+                        float: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-12px)' } },
+                        shimmer: { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
+                    }
+                }
+            }
+        }
     </script>
-    <script type="module" crossorigin src="/assets/index-gZP5GwQM.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CZDX_EoW.css">
-  </head>
-  <body class="dark">
-    <div id="root"></div>
-  </body>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            background: #080c10;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #080c10;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #080c10;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #00d4aa;
+            border-radius: 3px;
+        }
+
+        /* Animated gradient hero bg */
+        .hero-bg {
+            background: radial-gradient(ellipse at 20% 50%, rgba(0, 212, 170, 0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 60%),
+                #080c10;
+        }
+
+        /* Noise texture overlay */
+        .noise::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.4;
+        }
+
+        /* Glowing accent line */
+        .glow-line {
+            background: linear-gradient(90deg, transparent, #00d4aa, transparent);
+            height: 1px;
+        }
+
+        /* Skill bar */
+        .skill-bar-fill {
+            background: linear-gradient(90deg, #00d4aa, #6366f1);
+            height: 3px;
+            border-radius: 2px;
+            width: 0;
+            transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Card hover glow */
+        .card-glow {
+            transition: all 0.3s ease;
+            border: 1px solid #1f2937;
+        }
+
+        .card-glow:hover {
+            border-color: rgba(0, 212, 170, 0.3);
+            box-shadow: 0 0 30px rgba(0, 212, 170, 0.08), 0 8px 32px rgba(0, 0, 0, 0.4);
+            transform: translateY(-4px);
+        }
+
+        /* Tag pill */
+        .tag-pill {
+            background: rgba(0, 212, 170, 0.1);
+            border: 1px solid rgba(0, 212, 170, 0.25);
+            color: #00d4aa;
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            padding: 3px 10px;
+            border-radius: 999px;
+        }
+
+        /* Nav links */
+        .nav-link {
+            position: relative;
+            font-family: 'Space Mono', monospace;
+            font-size: 13px;
+            color: #94a3b8;
+            transition: color 0.3s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #00d4aa;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #00d4aa;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Mobile nav */
+        #mobile-menu {
+            display: none;
+        }
+
+        #mobile-menu.open {
+            display: flex;
+        }
+
+        /* Section hidden for reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Profile photo ring */
+        .photo-ring {
+            background: conic-gradient(#00d4aa 0deg, #6366f1 180deg, #00d4aa 360deg);
+            animation: spin 6s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Typewriter cursor */
+        #typewriter::after {
+            content: '|';
+            animation: blink 1s step-end infinite;
+            color: #00d4aa;
+        }
+
+        /* Timeline line */
+        .timeline-line {
+            background: linear-gradient(180deg, #00d4aa 0%, #6366f1 100%);
+            width: 2px;
+        }
+
+        /* Blog markdown styles */
+        .prose-dark h1,
+        .prose-dark h2,
+        .prose-dark h3 {
+            color: #e2e8f0;
+            font-family: 'Syne', sans-serif;
+        }
+
+        .prose-dark p {
+            color: #94a3b8;
+            line-height: 1.8;
+        }
+
+        .prose-dark code {
+            background: #1f2937;
+            color: #00d4aa;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Space Mono', monospace;
+            font-size: 13px;
+        }
+
+        .prose-dark pre {
+            background: #0d1117 !important;
+            border: 1px solid #1f2937;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        .prose-dark pre code {
+            background: transparent;
+            padding: 0;
+        }
+
+        .prose-dark ul {
+            color: #94a3b8;
+            list-style: disc;
+            padding-left: 1.5rem;
+        }
+
+        .prose-dark li {
+            margin-bottom: 0.4rem;
+        }
+
+        .prose-dark strong {
+            color: #e2e8f0;
+        }
+
+        /* Active nav highlight */
+        .nav-link.active {
+            color: #00d4aa;
+        }
+
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        /* Grid bg pattern */
+        .grid-bg {
+            background-image: linear-gradient(rgba(0, 212, 170, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 212, 170, 0.04) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Loading shimmer */
+        .shimmer-box {
+            background: linear-gradient(90deg, #111827 25%, #1f2937 50%, #111827 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+
+        /* Floating dots */
+        .dot {
+            position: absolute;
+            border-radius: 50%;
+            animation: float var(--d, 4s) ease-in-out infinite;
+            animation-delay: var(--delay, 0s);
+        }
+    </style>
+</head>
+
+<body class="noise dark">
+
+    <!-- ============ NAVBAR ============ -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#home" class="font-mono text-accent font-bold text-lg tracking-tight">
+                <span class="text-subtle">&lt;</span>JHM<span class="text-subtle">/&gt;</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#blog" class="nav-link">Blog</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <!-- CTA + Hamburger -->
+            <div class="flex items-center gap-4">
+                <a href="https://github.com/jawadhossainmahi" target="_blank"
+                    class="hidden md:flex items-center gap-2 text-xs font-mono border border-accent text-accent px-4 py-2 rounded hover:bg-accent hover:text-bg transition-all duration-300">
+                    GitHub <span class="text-subtle">↗</span>
+                </a>
+                <button id="hamburger" class="md:hidden text-subtle hover:text-accent transition-colors p-1">
+                    <svg id="ham-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="flex-col md:hidden bg-surface border-t border-border px-6 py-4 gap-4">
+            <a href="#home" class="nav-link py-2">Home</a>
+            <a href="#about" class="nav-link py-2">About</a>
+            <a href="#skills" class="nav-link py-2">Skills</a>
+            <a href="#projects" class="nav-link py-2">Projects</a>
+            <a href="#blog" class="nav-link py-2">Blog</a>
+            <a href="#contact" class="nav-link py-2">Contact</a>
+            <a href="https://github.com/jawadhossainmahi" target="_blank"
+                class="text-xs font-mono text-accent mt-2">GitHub ↗</a>
+        </div>
+    </nav>
+
+    <!-- ============ HERO ============ -->
+    <section id="home" class="hero-bg grid-bg min-h-screen flex items-center relative overflow-hidden pt-20">
+        <!-- Floating orbs -->
+        <div class="dot w-64 h-64 bg-accent/5 blur-3xl" style="--d:6s;--delay:0s;top:10%;left:5%;"></div>
+        <div class="dot w-48 h-48 bg-accent2/5 blur-3xl" style="--d:8s;--delay:2s;bottom:20%;right:10%;"></div>
+        <div class="dot w-32 h-32 bg-accent/3 blur-2xl" style="--d:5s;--delay:1s;top:50%;right:25%;"></div>
+
+        <div class="max-w-6xl mx-auto px-6 py-20 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Left: Text -->
+                <div>
+                    <!-- Status pill -->
+                    <div
+                        class="inline-flex items-center gap-2 bg-accent/10 border border-accent/25 rounded-full px-4 py-1.5 mb-8 animate-fade-up">
+                        <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                        <span class="text-accent font-mono text-xs">Available for freelance work</span>
+                    </div>
+
+                    <h1 class="font-display text-5xl lg:text-7xl font-extrabold leading-none mb-4 animate-fade-up"
+                        style="animation-delay:0.1s; opacity:0;">
+                        <span class="text-text">Jawad</span><br />
+                        <span class="text-accent">Hossain</span><br />
+                        <span class="text-subtle text-4xl lg:text-5xl font-semibold">Mahi</span>
+                    </h1>
+
+                    <div class="flex items-center gap-2 font-mono text-subtle text-sm mb-6 animate-fade-up"
+                        style="animation-delay:0.2s; opacity:0;">
+                        <span class="text-accent2">&gt;</span>
+                        <span id="typewriter"></span>
+                    </div>
+
+                    <p class="text-subtle text-base leading-relaxed max-w-md mb-10 animate-fade-up"
+                        style="animation-delay:0.3s; opacity:0;">
+                        Full Stack Developer crafting scalable, user-centric web experiences from Bangladesh.
+                        Passionate about clean code, performance, and modern frameworks.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 animate-fade-up" style="animation-delay:0.4s; opacity:0;">
+                        <a href="#projects"
+                            class="bg-accent text-bg font-display font-bold px-7 py-3 rounded-lg hover:bg-accent/90 transition-all duration-300 hover:shadow-lg hover:shadow-accent/25 hover:-translate-y-0.5">
+                            View Work
+                        </a>
+                        <a href="#contact"
+                            class="border border-border text-text font-mono px-7 py-3 rounded-lg hover:border-accent hover:text-accent transition-all duration-300">
+                            Hire Me
+                        </a>
+                    </div>
+
+                    <!-- Social links -->
+                    <div class="flex gap-5 mt-10 animate-fade-up" style="animation-delay:0.5s; opacity:0;">
+                        <a href="https://github.com/jawadhossainmahi" target="_blank"
+                            class="text-muted hover:text-accent transition-colors text-sm font-mono">
+                            GH ↗
+                        </a>
+                        <a href="https://www.linkedin.com/in/jawadhossainmahi/" target="_blank"
+                            class="text-muted hover:text-accent transition-colors text-sm font-mono">
+                            LI ↗
+                        </a>
+                        <a href="https://www.facebook.com/jawadhossainmahi/" target="_blank"
+                            class="text-muted hover:text-accent transition-colors text-sm font-mono">
+                            FB ↗
+                        </a>
+                        <a href="https://www.instagram.com/jawadhossainmahi" target="_blank"
+                            class="text-muted hover:text-accent transition-colors text-sm font-mono">
+                            IG ↗
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Photo -->
+                <div class="flex justify-center lg:justify-end animate-fade-in"
+                    style="animation-delay:0.3s; opacity:0;">
+                    <div class="relative animate-float">
+                        <!-- Spinning ring -->
+                        <div class="photo-ring absolute -inset-1.5 rounded-full opacity-60 blur-sm"></div>
+                        <div
+                            class="relative w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-2 border-surface">
+                            <img src="jawad.jpg" alt="Jawad Hossain Mahi"
+                                class="w-full h-full object-cover object-top" />
+                        </div>
+                        <!-- Decorative elements -->
+                        <div
+                            class="absolute -bottom-4 -right-4 bg-card border border-border rounded-lg px-4 py-2 font-mono text-xs text-accent shadow-xl">
+                            2+ yrs exp
+                        </div>
+                        <div
+                            class="absolute -top-2 -left-6 bg-card border border-border rounded-lg px-3 py-1.5 font-mono text-xs text-accent2 shadow-xl">
+                            Full Stack
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Stats row -->
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-border/50 animate-fade-up"
+                style="animation-delay:0.6s; opacity:0;">
+                <div class="text-center">
+                    <div class="font-display text-3xl font-extrabold text-accent">2+</div>
+                    <div class="text-subtle text-sm mt-1 font-mono">Years Exp</div>
+                </div>
+                <div class="text-center">
+                    <div class="font-display text-3xl font-extrabold text-accent">10+</div>
+                    <div class="text-subtle text-sm mt-1 font-mono">Projects</div>
+                </div>
+                <div class="text-center">
+                    <div class="font-display text-3xl font-extrabold text-accent">5+</div>
+                    <div class="text-subtle text-sm mt-1 font-mono">Frameworks</div>
+                </div>
+                <div class="text-center">
+                    <div class="font-display text-3xl font-extrabold text-accent">3.44</div>
+                    <div class="text-subtle text-sm mt-1 font-mono">CGPA</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="py-24 bg-surface relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="reveal">
+                <span class="font-mono text-accent text-sm">01. about_me</span>
+                <h2 class="font-display text-4xl font-bold text-text mt-2 mb-12">The Developer Behind The Code</h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+                <!-- Bio -->
+                <div class="reveal">
+                    <p class="text-subtle leading-relaxed mb-5">
+                        I'm a <span class="text-text font-medium">Full Stack Developer</span> based in Narayanganj,
+                        Bangladesh,
+                        currently pursuing my B.Sc. in Computer Science & Engineering at Green University of Bangladesh.
+                        I build fast, scalable, and visually refined web applications from end to end.
+                    </p>
+                    <p class="text-subtle leading-relaxed mb-5">
+                        My stack spans from <span class="text-accent font-mono">React.js</span> and
+                        <span class="text-accent font-mono">Tailwind CSS</span> on the frontend to
+                        <span class="text-accent font-mono">Laravel</span> and <span
+                            class="text-accent font-mono">CodeIgniter</span>
+                        on the backend. I enjoy the challenge of making systems that are both technically sound and
+                        great to use.
+                    </p>
+                    <p class="text-subtle leading-relaxed">
+                        Outside work, I explore Flutter for mobile, experiment with real-time systems using WebSockets,
+                        and continuously expand my expertise in full-stack patterns and architecture.
+                    </p>
+
+                    <div class="mt-8 flex gap-3 flex-wrap">
+                        <span class="tag-pill">🇧🇩 Bangladesh</span>
+                        <span class="tag-pill">🎓 CSE Student</span>
+                        <span class="tag-pill">💼 Open to Work</span>
+                        <span class="tag-pill">⚡ Full Stack</span>
+                    </div>
+                </div>
+
+                <!-- Timeline -->
+                <div class="reveal relative pl-8">
+                    <div class="timeline-line absolute left-0 top-2 bottom-2 rounded-full"></div>
+
+                    <div class="mb-8 relative">
+                        <div
+                            class="absolute -left-10 top-1 w-4 h-4 rounded-full bg-accent border-2 border-surface shadow-lg shadow-accent/50">
+                        </div>
+                        <div class="font-mono text-accent text-xs mb-1">2023 — Present</div>
+                        <div class="font-display font-bold text-text">Full Stack Developer</div>
+                        <div class="text-subtle text-sm">Webshinez Technologies · Narayanganj</div>
+                        <p class="text-subtle text-sm mt-2 leading-relaxed">
+                            Building and maintaining production web apps. Led development of institutional platforms and
+                            LMS systems.
+                        </p>
+                    </div>
+
+                    <div class="mb-8 relative">
+                        <div
+                            class="absolute -left-10 top-1 w-4 h-4 rounded-full bg-accent2 border-2 border-surface shadow-lg shadow-accent2/50">
+                        </div>
+                        <div class="font-mono text-accent2 text-xs mb-1">2024 — 2028</div>
+                        <div class="font-display font-bold text-text">B.Sc. Computer Science & Engineering</div>
+                        <div class="text-subtle text-sm">Green University of Bangladesh</div>
+                        <p class="text-subtle text-sm mt-2">CGPA: 3.44 | Currently in 2nd Year</p>
+                    </div>
+
+                    <div class="mb-8 relative">
+                        <div class="absolute -left-10 top-1 w-4 h-4 rounded-full bg-border border-2 border-surface">
+                        </div>
+                        <div class="font-mono text-subtle text-xs mb-1">2023</div>
+                        <div class="font-display font-bold text-text">HSC — Science</div>
+                        <div class="text-subtle text-sm">Narayanganj College · GPA 4.83/5.0</div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -left-10 top-1 w-4 h-4 rounded-full bg-border border-2 border-surface">
+                        </div>
+                        <div class="font-mono text-subtle text-xs mb-1">2021</div>
+                        <div class="font-display font-bold text-text">SSC — Science</div>
+                        <div class="text-subtle text-sm">Adarsha School · GPA 4.83/5.0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="py-24 bg-bg relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="reveal">
+                <span class="font-mono text-accent text-sm">02. skills</span>
+                <h2 class="font-display text-4xl font-bold text-text mt-2 mb-12">Technical Arsenal</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
+
+                <!-- Frontend -->
+                <div class="card-glow bg-card rounded-xl p-6">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center text-xl">🎨</div>
+                        <div class="font-display font-bold text-text">Frontend</div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-sm mb-1.5"><span
+                                    class="text-subtle">React.js</span><span
+                                    class="font-mono text-accent text-xs">90%</span></div>
+                            <div class="bg-border h-0.5 rounded-full">
+                                <div class="skill-bar-fill" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1.5"><span class="text-subtle">Tailwind
+                                    CSS</span><span class="font-mono text-accent text-xs">92%</span></div>
+                            <div class="bg-border h-0.5 rounded-full">
+                                <div class="skill-bar-fill" data-width="92"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1.5"><span
+                                    class="text-subtle">JavaScript</span><span
+                                    class="font-mono text-accent text-xs">85%</span></div>
+                            <div class="bg-border h-0.5 rounded-full">
+                                <div class="skill-bar-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1.5"><span class="text-subtle">GSAP
+                                    Animations</span><span class="font-mono text-accent text-xs">75%</span></div>
+                            <div class="bg-border h-0.5 rounded-full">
+                                <div class="skill-bar-fill" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1.5"><span
+                                    class="text-subtle">Next.js</span><span
+                                    class="font-mono text-accent text-xs">70%</span></div>
+                            <div class="bg-border h-0.5 rounded-full">
+                                <div class="skill-bar-fill" data-width="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="card-glow bg-card rounded-xl p-6">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-10 h-10 rounded-lg bg-accent2/10 flex items-center justify-center text-xl">⚙️
+                        </div>
+                        <div class="font-display font-bold text-text">Backend</div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-sm mb-1.5"><span
+                                    class="text-subtle">Laravel</span><span
+                                    class="font-mono text-accent text-xs">88%</span></div>
+                            <div class="bg-border h-0.5 rounded-full">
+                                <div class="skill-bar-fill" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1.5"><span class="text-subtle">PHP</span><span
+                                    class="font-mono text-accent text-xs">85%</span></div>
+                            <div class="bg-border h-0.5 rounded-full">
+                                <div class="skill-bar-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1.5"><span
+                                    class="text-subtle">CodeIgniter</span><span
+                                    class="font-mono text-accent text-xs">80%</span></div>
+                            <div class="bg-border h-0.5 rounded-full">
+                                <div class="skill-bar-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1.5"><span class="text-subtle">REST
+                                    APIs</span><span class="font-mono text-accent text-xs">85%</span></div>
+                            <div class="bg-border h-0.5 rounded-full">
+                                <div class="skill-bar-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1.5"><span
+                                    class="text-subtle">FastAPI</span><span
+                                    class="font-mono text-accent text-xs">65%</span></div>
+                            <div class="bg-border h-0.5 rounded-full">
+                                <div class="skill-bar-fill" data-width="65"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other -->
+                <div class="card-glow bg-card rounded-xl p-6">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center text-xl">🛠
+                        </div>
+                        <div class="font-display font-bold text-text">Tools & DB</div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-sm mb-1.5"><span class="text-subtle">MySQL</span><span
+                                    class="font-mono text-accent text-xs">88%</span></div>
+                            <div class="bg-border h-0.5 rounded-full">
+                                <div class="skill-bar-fill" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1.5"><span class="text-subtle">Git &
+                                    GitHub</span><span class="font-mono text-accent text-xs">85%</span></div>
+                            <div class="bg-border h-0.5 rounded-full">
+                                <div class="skill-bar-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1.5"><span
+                                    class="text-subtle">WebSockets</span><span
+                                    class="font-mono text-accent text-xs">78%</span></div>
+                            <div class="bg-border h-0.5 rounded-full">
+                                <div class="skill-bar-fill" data-width="78"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1.5"><span
+                                    class="text-subtle">Flutter</span><span
+                                    class="font-mono text-accent text-xs">65%</span></div>
+                            <div class="bg-border h-0.5 rounded-full">
+                                <div class="skill-bar-fill" data-width="65"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1.5"><span
+                                    class="text-subtle">MongoDB</span><span
+                                    class="font-mono text-accent text-xs">60%</span></div>
+                            <div class="bg-border h-0.5 rounded-full">
+                                <div class="skill-bar-fill" data-width="60"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech tags cloud -->
+            <div class="mt-10 reveal flex flex-wrap gap-3">
+                <span class="tag-pill">C / C++</span>
+                <span class="tag-pill">Python</span>
+                <span class="tag-pill">Angular.js</span>
+                <span class="tag-pill">jQuery</span>
+                <span class="tag-pill">Bootstrap</span>
+                <span class="tag-pill">AJAX</span>
+                <span class="tag-pill">Livewire</span>
+                <span class="tag-pill">Axios</span>
+                <span class="tag-pill">Popper.js</span>
+                <span class="tag-pill">Yajra DataTable</span>
+                <span class="tag-pill">Laravel Reverb</span>
+                <span class="tag-pill">Swiper</span>
+                <span class="tag-pill">Owl Carousel</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="py-24 bg-surface relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="reveal">
+                <span class="font-mono text-accent text-sm">03. projects</span>
+                <h2 class="font-display text-4xl font-bold text-text mt-2 mb-12">Selected Work</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Project 1 -->
+                <div class="card-glow bg-card rounded-xl overflow-hidden reveal">
+                    <div class="h-2 bg-gradient-to-r from-accent to-accent2"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center text-xl">🕌
+                            </div>
+                            <div class="flex gap-2">
+                                <a href="https://github.com/jawadhossainmahi" target="_blank"
+                                    class="text-muted hover:text-accent transition-colors font-mono text-xs">GH ↗</a>
+                            </div>
+                        </div>
+                        <h3 class="font-display font-bold text-text text-lg mb-2">Markaj U Talimis Sunnah</h3>
+                        <p class="text-subtle text-sm leading-relaxed mb-5">
+                            Full-stack institutional website with interactive frontend. Laravel backend + Vite React
+                            with rich UI components including Swiper and Owl Carousel.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-pill">React.js</span>
+                            <span class="tag-pill">Laravel</span>
+                            <span class="tag-pill">Bootstrap</span>
+                            <span class="tag-pill">jQuery</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="card-glow bg-card rounded-xl overflow-hidden reveal">
+                    <div class="h-2 bg-gradient-to-r from-accent2 to-purple-500"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="w-10 h-10 rounded-lg bg-accent2/10 flex items-center justify-center text-xl">💼
+                            </div>
+                            <a href="https://github.com/jawadhossainmahi" target="_blank"
+                                class="text-muted hover:text-accent transition-colors font-mono text-xs">GH ↗</a>
+                        </div>
+                        <h3 class="font-display font-bold text-text text-lg mb-2">Webshinez Technologies Website</h3>
+                        <p class="text-subtle text-sm leading-relaxed mb-5">
+                            Modern responsive company website with GSAP-powered animations, smooth scroll, and
+                            LightGallery integration for optimized media presentation.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-pill">React.js</span>
+                            <span class="tag-pill">Tailwind CSS</span>
+                            <span class="tag-pill">GSAP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="card-glow bg-card rounded-xl overflow-hidden reveal">
+                    <div class="h-2 bg-gradient-to-r from-green-500 to-accent"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center text-xl">
+                                🎓</div>
+                            <a href="https://github.com/Eduself-V2" target="_blank"
+                                class="text-muted hover:text-accent transition-colors font-mono text-xs">GH ↗</a>
+                        </div>
+                        <h3 class="font-display font-bold text-text text-lg mb-2">EduSelf LMS</h3>
+                        <p class="text-subtle text-sm leading-relaxed mb-5">
+                            Laravel-based School Management System with student dashboards, authentication, exam
+                            modules, accounting, homework, and HRM portals.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-pill">Laravel</span>
+                            <span class="tag-pill">Bootstrap</span>
+                            <span class="tag-pill">Yajra</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="card-glow bg-card rounded-xl overflow-hidden reveal">
+                    <div class="h-2 bg-gradient-to-r from-orange-500 to-red-500"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="w-10 h-10 rounded-lg bg-orange-500/10 flex items-center justify-center text-xl">
+                                💬</div>
+                            <a href="https://github.com/jawadhossainmahi/laravel-chat-system" target="_blank"
+                                class="text-muted hover:text-accent transition-colors font-mono text-xs">GH ↗</a>
+                        </div>
+                        <h3 class="font-display font-bold text-text text-lg mb-2">Laravel Real-Time Chat</h3>
+                        <p class="text-subtle text-sm leading-relaxed mb-5">
+                            Private chat system using Laravel 12, Livewire 3, and Laravel Reverb with live messaging,
+                            typing indicators, and WebSocket broadcasting.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-pill">Laravel</span>
+                            <span class="tag-pill">Livewire</span>
+                            <span class="tag-pill">Reverb</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="card-glow bg-card rounded-xl overflow-hidden reveal">
+                    <div class="h-2 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-xl">📋
+                            </div>
+                            <a href="https://github.com/jawadhossainmahi/Omr-Sheet-Generate" target="_blank"
+                                class="text-muted hover:text-accent transition-colors font-mono text-xs">GH ↗</a>
+                        </div>
+                        <h3 class="font-display font-bold text-text text-lg mb-2">OMR Sheet Generator</h3>
+                        <p class="text-subtle text-sm leading-relaxed mb-5">
+                            Generate customizable OMR sheets with QR codes for smartphone scanning. Built for
+                            educational institutions requiring efficient data collection.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-pill">HTML</span>
+                            <span class="tag-pill">JavaScript</span>
+                            <span class="tag-pill">QR Code</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="card-glow bg-card rounded-xl overflow-hidden reveal">
+                    <div class="h-2 bg-gradient-to-r from-pink-500 to-accent2"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="w-10 h-10 rounded-lg bg-pink-500/10 flex items-center justify-center text-xl">📱
+                            </div>
+                            <a href="https://github.com/jawadhossainmahi/flutter-fastapi-basic-crud" target="_blank"
+                                class="text-muted hover:text-accent transition-colors font-mono text-xs">GH ↗</a>
+                        </div>
+                        <h3 class="font-display font-bold text-text text-lg mb-2">Flutter + FastAPI CRUD</h3>
+                        <p class="text-subtle text-sm leading-relaxed mb-5">
+                            Full-stack mobile app with Flutter frontend and FastAPI backend. Demonstrates modular CRUD
+                            patterns across mobile and Python backend.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-pill">Flutter</span>
+                            <span class="tag-pill">FastAPI</span>
+                            <span class="tag-pill">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-10 reveal">
+                <a href="https://github.com/jawadhossainmahi?tab=repositories" target="_blank"
+                    class="inline-flex items-center gap-2 border border-border text-subtle hover:text-accent hover:border-accent font-mono text-sm px-6 py-3 rounded-lg transition-all duration-300">
+                    View All Repositories on GitHub ↗
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ BLOG ============ -->
+    <section id="blog" class="py-24 bg-bg relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="reveal">
+                <span class="font-mono text-accent text-sm">04. blog</span>
+                <h2 class="font-display text-4xl font-bold text-text mt-2 mb-3">Thoughts & Tutorials</h2>
+                <p class="text-subtle mb-12 max-w-xl">
+                    I write about web development, frameworks, and things I learn along the way.
+                    Posts are loaded from Markdown files in the GitHub repo — add a new <code
+                        class="text-accent font-mono text-sm">.md</code> file to publish.
+                </p>
+            </div>
+
+            <div id="blog-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Shimmer loaders -->
+                <div class="shimmer-box rounded-xl h-64"></div>
+                <div class="shimmer-box rounded-xl h-64"></div>
+                <div class="shimmer-box rounded-xl h-64"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ BLOG POST MODAL ============ -->
+    <div id="blog-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+        <div class="bg-surface border border-border rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto relative">
+            <div
+                class="sticky top-0 bg-surface border-b border-border px-6 py-4 flex justify-between items-center z-10">
+                <div id="modal-tags" class="flex gap-2 flex-wrap"></div>
+                <button id="close-modal"
+                    class="text-muted hover:text-accent transition-colors text-lg font-mono">✕</button>
+            </div>
+            <div class="p-8">
+                <div id="modal-meta" class="font-mono text-subtle text-xs mb-4"></div>
+                <div id="modal-content" class="prose-dark"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="py-24 bg-surface relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="reveal text-center max-w-2xl mx-auto mb-16">
+                <span class="font-mono text-accent text-sm">05. contact</span>
+                <h2 class="font-display text-4xl font-bold text-text mt-2 mb-4">Let's Build Together</h2>
+                <p class="text-subtle">
+                    Have a project in mind? Looking for a developer? I'm always open to new opportunities.
+                    Reach out and let's talk.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <!-- Contact info -->
+                <div class="reveal space-y-6">
+                    <div class="card-glow bg-card rounded-xl p-6 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-2xl">📍
+                        </div>
+                        <div>
+                            <div class="text-subtle text-sm font-mono">Location</div>
+                            <div class="text-text font-medium">Narayanganj, Bangladesh</div>
+                        </div>
+                    </div>
+
+                    <div class="card-glow bg-card rounded-xl p-6 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-accent2/10 flex items-center justify-center text-2xl">💼
+                        </div>
+                        <div>
+                            <div class="text-subtle text-sm font-mono">Employment</div>
+                            <div class="text-text font-medium">Webshinez Technologies</div>
+                        </div>
+                    </div>
+
+                    <div class="card-glow bg-card rounded-xl p-6">
+                        <div class="text-subtle text-sm font-mono mb-3">Find me on</div>
+                        <div class="flex gap-4 flex-wrap">
+                            <a href="https://github.com/jawadhossainmahi" target="_blank"
+                                class="flex items-center gap-2 text-sm text-text hover:text-accent transition-colors font-mono">
+                                GitHub ↗
+                            </a>
+                            <a href="https://www.linkedin.com/in/jawadhossainmahi/" target="_blank"
+                                class="flex items-center gap-2 text-sm text-text hover:text-accent transition-colors font-mono">
+                                LinkedIn ↗
+                            </a>
+                            <a href="https://www.facebook.com/jawadhossainmahi/" target="_blank"
+                                class="flex items-center gap-2 text-sm text-text hover:text-accent transition-colors font-mono">
+                                Facebook ↗
+                            </a>
+                            <a href="https://www.instagram.com/jawadhossainmahi" target="_blank"
+                                class="flex items-center gap-2 text-sm text-text hover:text-accent transition-colors font-mono">
+                                Instagram ↗
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simple CTA -->
+                <div class="reveal">
+                    <div class="bg-card border border-border rounded-xl p-8 text-center">
+                        <div class="text-5xl mb-4">👋</div>
+                        <h3 class="font-display font-bold text-text text-xl mb-3">Say Hello!</h3>
+                        <p class="text-subtle text-sm mb-8 leading-relaxed">
+                            The best way to reach me is through LinkedIn or by checking my GitHub.
+                            I'm usually pretty quick to respond!
+                        </p>
+                        <a href="https://www.linkedin.com/in/jawadhossainmahi/" target="_blank"
+                            class="block bg-accent text-bg font-display font-bold px-6 py-3 rounded-lg hover:bg-accent/90 transition-all duration-300 hover:shadow-lg hover:shadow-accent/25 mb-3">
+                            Message on LinkedIn
+                        </a>
+                        <a href="https://github.com/jawadhossainmahi" target="_blank"
+                            class="block border border-border text-subtle hover:text-accent hover:border-accent font-mono text-sm px-6 py-3 rounded-lg transition-all duration-300">
+                            View GitHub Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="bg-bg border-t border-border py-10">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="font-mono text-accent font-bold">
+                <span class="text-subtle">&lt;</span>JHM<span class="text-subtle">/&gt;</span>
+            </div>
+            <div class="text-subtle text-sm font-mono">
+                © <span id="year"></span> Jawad Hossain Mahi · Built with HTML, Tailwind & ☕
+            </div>
+            <div class="flex gap-5">
+                <a href="https://github.com/jawadhossainmahi" target="_blank"
+                    class="text-muted hover:text-accent font-mono text-sm transition-colors">GH</a>
+                <a href="https://www.linkedin.com/in/jawadhossainmahi/" target="_blank"
+                    class="text-muted hover:text-accent font-mono text-sm transition-colors">LI</a>
+                <a href="https://www.facebook.com/jawadhossainmahi/" target="_blank"
+                    class="text-muted hover:text-accent font-mono text-sm transition-colors">FB</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ SCRIPTS ============ -->
+    <script>
+        $(document).ready(function () {
+
+            // ---- Year ----
+            $('#year').text(new Date().getFullYear());
+
+            // ---- Navbar scroll effect ----
+            $(window).on('scroll', function () {
+                if ($(this).scrollTop() > 60) {
+                    $('#navbar').addClass('bg-surface/95 backdrop-blur-md border-b border-border shadow-xl');
+                } else {
+                    $('#navbar').removeClass('bg-surface/95 backdrop-blur-md border-b border-border shadow-xl');
+                }
+            });
+
+            // ---- Hamburger menu ----
+            $('#hamburger').on('click', function () {
+                $('#mobile-menu').toggleClass('open');
+            });
+
+            // Close mobile menu on link click
+            $('#mobile-menu a').on('click', function () {
+                $('#mobile-menu').removeClass('open');
+            });
+
+            // ---- Typewriter effect ----
+            const phrases = [
+                'Full Stack Developer',
+                'React.js Enthusiast',
+                'Laravel Engineer',
+                'UI/UX Craftsman',
+                'Clean Code Advocate',
+            ];
+            let phraseIdx = 0, charIdx = 0, isDeleting = false;
+
+            function type() {
+                const current = phrases[phraseIdx];
+                if (isDeleting) {
+                    charIdx--;
+                } else {
+                    charIdx++;
+                }
+
+                $('#typewriter').text(current.substring(0, charIdx));
+
+                let speed = isDeleting ? 60 : 100;
+
+                if (!isDeleting && charIdx === current.length) {
+                    speed = 1800;
+                    isDeleting = true;
+                } else if (isDeleting && charIdx === 0) {
+                    isDeleting = false;
+                    phraseIdx = (phraseIdx + 1) % phrases.length;
+                    speed = 300;
+                }
+
+                setTimeout(type, speed);
+            }
+            type();
+
+            // ---- Intersection Observer for reveal + skill bars ----
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        $(entry.target).addClass('visible');
+
+                        // Animate skill bars inside this element
+                        $(entry.target).find('.skill-bar-fill').each(function () {
+                            const w = $(this).data('width');
+                            setTimeout(() => { $(this).css('width', w + '%'); }, 200);
+                        });
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            // If not inside a reveal, also handle lone skill bars
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // Also trigger hero elements (they have inline opacity:0)
+            setTimeout(() => {
+                document.querySelectorAll('.animate-fade-up[style*="opacity:0"], .animate-fade-in[style*="opacity:0"]').forEach(el => {
+                    el.style.opacity = '';
+                });
+            }, 100);
+
+            // ---- Active nav link on scroll ----
+            const sections = ['home', 'about', 'skills', 'projects', 'blog', 'contact'];
+            $(window).on('scroll.nav', function () {
+                const scrollY = $(window).scrollTop() + 100;
+                sections.forEach(id => {
+                    const el = document.getElementById(id);
+                    if (el && scrollY >= el.offsetTop && scrollY < el.offsetTop + el.offsetHeight) {
+                        $('.nav-link').removeClass('active');
+                        $(`.nav-link[href="#${id}"]`).addClass('active');
+                    }
+                });
+            });
+
+            // ---- Load Blog Posts ----
+            function loadBlog() {
+                $.getJSON('blogs/posts.json', function (posts) {
+                    let html = '';
+                    posts.forEach((post, i) => {
+                        const tagsHtml = post.tags.map(t => `<span class="tag-pill">${t}</span>`).join('');
+                        const delay = i * 100;
+                        html += `
+          <div class="card-glow bg-card rounded-xl overflow-hidden cursor-pointer reveal blog-card"
+               data-id="${post.id}" data-file="${post.file}" style="animation-delay:${delay}ms">
+            <div class="h-36 overflow-hidden relative">
+              <img src="${post.cover}" alt="${post.title}"
+                   class="w-full h-full object-cover opacity-60 hover:opacity-80 transition-opacity duration-300" />
+              <div class="absolute inset-0 bg-gradient-to-t from-card to-transparent"></div>
+            </div>
+            <div class="p-5">
+              <div class="font-mono text-subtle text-xs mb-2">${post.date}</div>
+              <h3 class="font-display font-bold text-text text-base mb-2 leading-snug">${post.title}</h3>
+              <p class="text-subtle text-sm leading-relaxed mb-4">${post.excerpt}</p>
+              <div class="flex flex-wrap gap-2">${tagsHtml}</div>
+            </div>
+          </div>
+        `;
+                    });
+                    $('#blog-grid').html(html);
+
+                    // Re-observe new blog cards
+                    document.querySelectorAll('.blog-card').forEach(el => observer.observe(el));
+
+                    // Click to open blog post
+                    $('.blog-card').on('click', function () {
+                        const file = $(this).data('file');
+                        const id = $(this).data('id');
+                        const post = posts.find(p => p.id === id);
+                        openBlogPost(post, file);
+                    });
+                }).fail(function () {
+                    $('#blog-grid').html('<p class="text-subtle font-mono col-span-3">Could not load blog posts. Make sure posts.json is available.</p>');
+                });
+            }
+
+            loadBlog();
+
+            // ---- Blog Modal ----
+            function openBlogPost(post, file) {
+                const tagsHtml = post.tags.map(t => `<span class="tag-pill">${t}</span>`).join('');
+                $('#modal-tags').html(tagsHtml);
+                $('#modal-meta').text(post.date + ' · ' + post.tags.join(', '));
+                $('#modal-content').html('<div class="shimmer-box h-64 rounded-lg"></div>');
+                $('#blog-modal').css('display', 'flex');
+                $('body').css('overflow', 'hidden');
+
+                $.get(file, function (md) {
+                    marked.setOptions({ highlight: (code, lang) => hljs.highlightAuto(code, [lang]).value });
+                    const html = marked.parse(md);
+                    $('#modal-content').html(html);
+                    hljs.highlightAll();
+                }).fail(function () {
+                    $('#modal-content').html('<p class="text-subtle">Could not load this post.</p>');
+                });
+            }
+
+            $('#close-modal').on('click', closeBlogModal);
+            $('#blog-modal').on('click', function (e) {
+                if ($(e.target).is('#blog-modal')) closeBlogModal();
+            });
+            $(document).on('keydown', function (e) {
+                if (e.key === 'Escape') closeBlogModal();
+            });
+
+            function closeBlogModal() {
+                $('#blog-modal').css('display', 'none');
+                $('body').css('overflow', '');
+            }
+
+            // ---- Smooth scroll for anchor links ----
+            $('a[href^="#"]').on('click', function (e) {
+                const target = $(this.getAttribute('href'));
+                if (target.length) {
+                    e.preventDefault();
+                    $('html, body').animate({ scrollTop: target.offset().top - 70 }, 500, 'swing');
+                }
+            });
+
+        });
+    </script>
+
+</body>
+
 </html>
