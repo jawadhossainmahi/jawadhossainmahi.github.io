@@ -27,6 +27,7 @@ This post walks you through the complete setup — from installation to live typ
 
 ## Step 1 — Install Laravel Reverb
 
+
 ```bash
 composer require laravel/reverb
 php artisan reverb:install
@@ -68,6 +69,7 @@ Livewire 3 works with Laravel Echo under the hood to listen for broadcast events
 php artisan make:model Message -m
 ```
 
+{% raw %}
 ```php
 // database/migrations/xxxx_create_messages_table.php
 Schema::create('messages', function (Blueprint $table) {
@@ -79,6 +81,7 @@ Schema::create('messages', function (Blueprint $table) {
     $table->timestamps();
 });
 ```
+{% endraw %}
 
 Run the migration:
 
@@ -136,6 +139,7 @@ class MessageSent implements ShouldBroadcastNow
 
 ## Step 5 — Authorize the Private Channel
 
+{% raw %}
 ```php
 // routes/channels.php
 use App\Models\User;
@@ -145,6 +149,7 @@ Broadcast::channel('chat.{ids}', function (User $user, string $ids) {
     return in_array($user->id, array_map('intval', $parts));
 });
 ```
+{% endraw %}
 
 ---
 
@@ -154,6 +159,7 @@ Broadcast::channel('chat.{ids}', function (User $user, string $ids) {
 php artisan make:livewire Chat
 ```
 
+{% raw %}
 ```php
 // app/Livewire/Chat.php
 <?php
@@ -231,11 +237,12 @@ class Chat extends Component
     }
 }
 ```
+{% endraw %}
 
 ---
 
 ## Step 7 — The Blade View
-
+{% raw %}
 ```html
 <!-- resources/views/livewire/chat.blade.php -->
 <div class="flex flex-col h-screen bg-gray-900">
@@ -277,6 +284,7 @@ class Chat extends Component
     observer.observe(box, { childList: true });
 </script>
 ```
+{% endraw %}
 
 ---
 
@@ -313,6 +321,7 @@ Messages sent in one window appear instantly in the other — no page refresh, n
 
 Create a second broadcast event for typing state:
 
+{% raw %}
 ```php
 // app/Events/UserTyping.php
 class UserTyping implements ShouldBroadcastNow
@@ -326,15 +335,18 @@ class UserTyping implements ShouldBroadcastNow
     }
 }
 ```
+{% endraw %}
 
 In your Livewire component, debounce the typing event:
 
+{% raw %}
 ```php
 public function updatedBody(): void
 {
     broadcast(new UserTyping(Auth::id(), $this->receiverId));
 }
 ```
+{% endraw %}
 
 Then listen in the component and show a "typing…" indicator with a timeout to hide it after a few seconds.
 

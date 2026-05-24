@@ -12,6 +12,7 @@ Before optimizing, understand the rule: **a component re-renders when its state 
 
 That last part is the trap. Even if your props didn't change, if the parent re-renders, so do all its children — by default.
 
+{% raw %}
 ```jsx
 function Parent() {
   const [count, setCount] = useState(0);
@@ -24,6 +25,7 @@ function Parent() {
   );
 }
 ```
+{% endraw %}
 
 The React DevTools **Profiler** tab is your best friend here — it highlights which components re-rendered and why.
 
@@ -33,12 +35,14 @@ The React DevTools **Profiler** tab is your best friend here — it highlights w
 
 Wrap a component in `React.memo` to skip re-rendering when its props haven't changed (shallow comparison).
 
+{% raw %}
 ```jsx
 const ExpensiveChild = React.memo(function ExpensiveChild({ title }) {
   console.log('rendered');
   return <h2>{title}</h2>;
 });
 ```
+{% endraw %}
 
 Now `ExpensiveChild` only re-renders when `title` actually changes.
 
@@ -50,6 +54,7 @@ Now `ExpensiveChild` only re-renders when `title` actually changes.
 
 Functions defined inside a component are recreated on every render. If you pass them as props to a memoized child, `memo` will see a new reference and re-render anyway.
 
+{% raw %}
 ```jsx
 // ❌ New function reference every render — breaks memo
 function Parent() {
@@ -63,6 +68,7 @@ function Parent() {
   return <MemoizedChild onClick={handleClick} />;
 }
 ```
+{% endraw %}
 
 The dependency array works exactly like `useEffect` — list every value from the component scope that the function uses.
 
@@ -72,6 +78,7 @@ The dependency array works exactly like `useEffect` — list every value from th
 
 If a computation is expensive and its inputs don't change often, cache the result:
 
+{% raw %}
 ```jsx
 function ProductList({ products, filterText }) {
   // ❌ Filters the entire list on every render
@@ -86,6 +93,7 @@ function ProductList({ products, filterText }) {
   return filtered.map(p => <ProductCard key={p.id} product={p} />);
 }
 ```
+{% endraw %}
 
 **Don't overuse it.** `useMemo` itself has a cost. Only memoize calculations that are measurably slow (sorting/filtering 10,000+ items, complex transforms, etc.).
 
@@ -95,6 +103,7 @@ function ProductList({ products, filterText }) {
 
 Don't ship your entire app in one bundle. Split it at the route level:
 
+{% raw %}
 ```jsx
 import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
@@ -115,6 +124,7 @@ function App() {
   );
 }
 ```
+{% endraw %}
 
 Each route now loads its JavaScript only when the user navigates to it. This can cut your initial bundle size dramatically.
 
@@ -128,6 +138,7 @@ Rendering 1,000 DOM nodes is slow. If you have long lists, only render what's vi
 npm install @tanstack/react-virtual
 ```
 
+{% raw %}
 ```jsx
 import { useVirtualizer } from '@tanstack/react-virtual';
 import { useRef } from 'react';
@@ -157,6 +168,7 @@ function VirtualList({ items }) {
   );
 }
 ```
+{% endraw %}
 
 The DOM always contains only ~10–15 visible rows, regardless of list size.
 
@@ -166,6 +178,7 @@ The DOM always contains only ~10–15 visible rows, regardless of list size.
 
 Every render creates a new object `{}` or array `[]` literal — which means new references, which breaks memoization.
 
+{% raw %}
 ```jsx
 // ❌ New object reference on every render
 <MyComponent style={{ color: 'red', fontSize: 14 }} />
@@ -179,6 +192,7 @@ function Parent() {
 // ✅ Or memoize if it depends on props/state
 const style = useMemo(() => ({ color: isError ? 'red' : 'green' }), [isError]);
 ```
+{% endraw %}
 
 ---
 
@@ -186,6 +200,7 @@ const style = useMemo(() => ({ color: isError ? 'red' : 'green' }), [isError]);
 
 Don't fire an API call or heavy filter on every keystroke. Debounce it:
 
+{% raw %}
 ```jsx
 import { useState, useEffect } from 'react';
 
@@ -209,6 +224,7 @@ function SearchBox({ onSearch }) {
   );
 }
 ```
+{% endraw %}
 
 ---
 
@@ -216,6 +232,7 @@ function SearchBox({ onSearch }) {
 
 If only one part of the tree needs a piece of state, keep it there — don't lift it higher than necessary.
 
+{% raw %}
 ```jsx
 // ❌ Lifting state causes the entire App to re-render on every keystroke
 function App() {
@@ -243,6 +260,7 @@ function App() {
   );
 }
 ```
+{% endraw %}
 
 ---
 
@@ -255,6 +273,7 @@ All the tips above are useless without measurement. Before optimizing anything:
 3. Look for components with long render times or that render too often
 4. Fix the actual bottleneck — not what you assume is slow
 
+{% raw %}
 ```jsx
 // You can also wrap specific trees in the Profiler API
 import { Profiler } from 'react';
@@ -265,6 +284,7 @@ import { Profiler } from 'react';
   <ProductList />
 </Profiler>
 ```
+{% endraw %}
 
 ---
 
