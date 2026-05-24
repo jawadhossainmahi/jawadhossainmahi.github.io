@@ -1,0 +1,38 @@
+[
+  {
+    "title": "E-Commerce Platform",
+    "description": "A full-featured e-commerce solution built with Laravel, featuring multi-vendor support, payment integration, and real-time inventory management.",
+    "technologies": ["Laravel", "PHP", "MySQL", "jQuery", "Tailwind CSS"],
+    "category": "Full Stack",
+    "github": "https://github.com/jawadhossainmahi",
+    "live": "#",
+    "featured": true
+  },
+  {
+    "title": "Task Management App",
+    "description": "A Flutter mobile app for task management with real-time sync, push notifications, and cross-platform support for iOS and Android.",
+    "technologies": ["Flutter", "Dart", "Firebase", "REST API"],
+    "category": "Mobile",
+    "github": "https://github.com/jawadhossainmahi",
+    "live": "#",
+    "featured": true
+  },
+  {
+    "title": "Portfolio Dashboard",
+    "description": "This very portfolio website — a live developer dashboard with GitHub API integration, GSAP animations, and premium glassmorphism UI.",
+    "technologies": ["React", "GSAP", "Tailwind CSS", "GitHub API"],
+    "category": "Frontend",
+    "github": "https://github.com/jawadhossainmahi",
+    "live": "#",
+    "featured": false
+  },
+  {
+    "title": "Blog CMS System",
+    "description": "A headless CMS blog platform with markdown support, tag filtering, SEO optimization, and an admin panel built in Laravel.",
+    "technologies": ["Laravel", "PHP", "MySQL", "Tailwind CSS"],
+    "category": "Full Stack",
+    "github": "https://github.com/jawadhossainmahi",
+    "live": "#",
+    "featured": false
+  }
+]

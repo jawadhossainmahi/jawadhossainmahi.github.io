@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jawadhossainmahi.com/sitemap.xml

@@ -1,0 +1,46 @@
+{
+  "about": {
+    "name": "Jawad Hossain Mahi",
+    "title": "Full Stack Developer",
+    "location": "Narayanganj, Bangladesh",
+    "roles": [
+      "Full Stack Developer",
+      "Laravel Developer",
+      "Flutter Enthusiast",
+      "CSE Student"
+    ],
+    "bio": [
+      "I am a passionate Full Stack Developer with a strong foundation in PHP, Laravel, and modern JavaScript frameworks. I specialize in building robust, scalable web applications that deliver real-world impact.",
+      "Currently pursuing my B.Sc. in Computer Science & Engineering at Green University of Bangladesh, I combine academic theory with hands-on experience from my role at Webshinez Technologies.",
+      "When I am not building web applications, I explore mobile development with Flutter and stay current with the ever-evolving tech landscape."
+    ]
+  },
+  "contact": {
+    "email": "jawadhossainmahi@gmail.com",
+    "location": "Narayanganj, Bangladesh",
+    "github": "https://github.com/jawadhossainmahi",
+    "linkedin": "#",
+    "tagline": "Open for opportunities and collaborations."
+  },
+  "footer": {
+    "name": "Jawad Hossain Mahi",
+    "builtWith": "React, GSAP & Tailwind"
+  },
+  "skills": [
+    { "name": "PHP",          "percentage": 94, "color": "#777BB4", "icon": "SiPhp"        },
+    { "name": "Laravel",      "percentage": 92, "color": "#FF2D20", "icon": "SiLaravel"    },
+    { "name": "JavaScript",   "percentage": 89, "color": "#F7DF1E", "icon": "SiJavascript" },
+    { "name": "MySQL",        "percentage": 87, "color": "#4479A1", "icon": "SiMysql"      },
+    { "name": "HTML",         "percentage": 85, "color": "#E34F26", "icon": "SiHtml5"      },
+    { "name": "CSS",          "percentage": 83, "color": "#1572B6", "icon": "SiCss"        },
+    { "name": "Flutter",      "percentage": 30, "color": "#02569B", "icon": "SiFlutter"    },
+    { "name": "Dart",         "percentage": 32, "color": "#0175C2", "icon": "SiDart"       },
+    { "name": "TypeScript",   "percentage": 74, "color": "#3178C6", "icon": "SiTypescript" },
+    { "name": "jQuery",       "percentage": 82, "color": "#0769AD", "icon": "SiJquery"     },
+    { "name": "Tailwind CSS", "percentage": 86, "color": "#06B6D4", "icon": "SiTailwindcss"},
+    { "name": "C++",          "percentage": 70, "color": "#00599C", "icon": "SiCplusplus"  },
+    { "name": "Git",          "percentage": 91, "color": "#F05032", "icon": "SiGit"        },
+    { "name": "GitHub",       "percentage": 93, "color": "#ffffff", "icon": "SiGithub"     },
+    { "name": "React",        "percentage": 68, "color": "#61DAFB", "icon": "SiReact"      }
+  ]
+}
