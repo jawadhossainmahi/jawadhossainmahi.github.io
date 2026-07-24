@@ -981,7 +981,10 @@
           <div class="p-6">
             <div class="flex justify-between items-start mb-3">
               <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-xl">${p.icon}</div>
-              <a href="${p.github}" target="_blank" class="text-muted hover:text-accent transition-colors font-mono text-xs">GH ↗</a>
+              <div class="flex items-center gap-3">
+                ${p.live ? `<a href="${p.live}" target="_blank" class="text-muted hover:text-accent transition-colors font-mono text-xs">Live ↗</a>` : ''}
+                <a href="${p.github}" target="_blank" class="text-muted hover:text-accent transition-colors font-mono text-xs">GH ↗</a>
+              </div>
             </div>
             <h3 class="font-display font-bold text-text text-lg mb-2">${p.title}</h3>
             <p class="text-subtle text-sm leading-relaxed mb-5">${p.desc}</p>
