@@ -107,18 +107,17 @@
     "achievement": "2nd Place — Green University Inter-Department Programming Contest",
     "projects": [
         {
-            "id": "eduself",
-            "flagship": true,
-            "icon": "🎓",
-            "title": "EduSelf",
-            "role": "Founder & Full Stack Developer",
-            "team": "Built with a 2-person core dev team",
-            "desc": "A multi-school, multi-branch School Management Software product, live in production.",
-            "problem": "Institutions running academics, HRM, accounting, exams, and student portals across separate spreadsheets and disconnected tools, with no single system covering a whole school — let alone multiple branches.",
-            "solution": "Designed and built a full School Management System covering Core, HRM, Accounting, Frontend, Academic, and Exam modules with student dashboards and secure authentication. Currently developing a dynamic React + TypeScript frontend module consuming Laravel REST APIs for real-time academic, accounting, and student data with type-safe, reusable components.",
-            "tags": ["Laravel", "React.js", "TypeScript", "Bootstrap", "jQuery", "Yajra DataTable", "REST APIs"],
-            "github": "https://github.com/Eduself-V2",
-            "live": "https://eduself.top",
+            "icon": "🕌",
+            "title": "Markaj U Talimis Sunnah",
+            "desc": "Full-stack institutional website with interactive frontend. Laravel backend + Vite React with rich UI components including Swiper and Owl Carousel.",
+            "tags": [
+                "React.js",
+                "Laravel",
+                "Bootstrap",
+                "jQuery"
+            ],
+            "github": "https://github.com/jawadhossainmahi",
+            "live": "",
             "gradient": "from-accent to-accent2"
         },
         {
@@ -129,17 +128,20 @@
             "tags": ["React.js", "Tailwind CSS", "GSAP", "LightGallery"],
             "github": "https://github.com/jawadhossainmahi",
             "live": "https://webshinez.com/",
-            "gradient": "from-accent2 to-purple"
+            "gradient": "from-accent2 to-purple-500"
         },
         {
-            "icon": "🕌",
-            "title": "Markaj U Talimis Sunnah",
-            "role": "Full Stack Developer",
-            "desc": "A full-stack institutional platform with a rich, interactive frontend — Vite + React backed by a Laravel API, with Swiper and Owl Carousel.",
-            "tags": ["React.js", "Vite", "Laravel", "Bootstrap", "jQuery", "Swiper", "Owl Carousel"],
-            "github": "https://github.com/jawadhossainmahi",
-            "live": "",
-            "gradient": "from-green to-accent"
+            "icon": "🎓",
+            "title": "EduSelf LMS",
+            "desc": "Laravel-based School Management System with student dashboards, authentication, exam modules, accounting, homework, and HRM portals.",
+            "tags": [
+                "Laravel",
+                "Bootstrap",
+                "Yajra"
+            ],
+            "github": "https://github.com/Eduself-V2",
+            "live": "https://eduself.top/",
+            "gradient": "from-green-500 to-accent"
         },
         {
             "icon": "💬",
@@ -149,7 +151,7 @@
             "tags": ["Laravel", "Livewire", "Reverb"],
             "github": "https://github.com/jawadhossainmahi/laravel-chat-system",
             "live": "",
-            "gradient": "from-orange to-red"
+            "gradient": "from-orange-500 to-red-500"
         },
         {
             "icon": "📋",
@@ -159,7 +161,7 @@
             "tags": ["HTML", "JavaScript", "QR Code"],
             "github": "https://github.com/jawadhossainmahi/Omr-Sheet-Generate",
             "live": "",
-            "gradient": "from-blue to-accent"
+            "gradient": "from-blue-500 to-cyan-500"
         },
         {
             "icon": "📱",
