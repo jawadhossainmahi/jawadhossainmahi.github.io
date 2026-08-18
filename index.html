@@ -1,1198 +1,312 @@
-<!-- Basic SEO -->
-<title>Jawad Hossain Mahi — Full Stack Developer</title>
+<!DOCTYPE html>
+<html lang="en">
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jawad Hossain Mahi — Full Stack Developer</title>
 
-<meta name="description"
-    content="Jawad Hossain Mahi is a Full Stack Developer from Bangladesh specializing in Laravel, React, Next.js, and scalable web applications." />
+    <meta name="description"
+        content="Jawad Hossain Mahi is a Full Stack Developer from Bangladesh building scalable web apps with Laravel, React, and Next.js." />
+    <meta name="keywords"
+        content="Jawad Hossain Mahi, Full Stack Developer, Laravel Developer, React Developer, Next.js, Web Developer Bangladesh, PHP Developer, JavaScript Developer" />
+    <meta name="author" content="Jawad Hossain Mahi" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://jawadhossainmahi.github.io/" />
+    <meta name="theme-color" content="#05070a" />
 
-<meta name="keywords"
-    content="Jawad Hossain Mahi, Full Stack Developer, Laravel Developer, React Developer, Next.js, Web Developer Bangladesh, PHP Developer, JavaScript Developer" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jawadhossainmahi.github.io/" />
+    <meta property="og:title" content="Jawad Hossain Mahi — Full Stack Developer" />
+    <meta property="og:description"
+        content="Full Stack Developer from Bangladesh building scalable web apps with Laravel, React, and Next.js." />
+    <meta property="og:image" content="https://jawadhossainmahi.github.io/assets/preview.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Jawad Hossain Mahi Portfolio" />
 
-<meta name="author" content="Jawad Hossain Mahi" />
-<meta name="robots" content="index, follow" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://jawadhossainmahi.github.io/" />
+    <meta name="twitter:title" content="Jawad Hossain Mahi — Full Stack Developer" />
+    <meta name="twitter:description"
+        content="Full Stack Developer from Bangladesh building scalable web apps with Laravel, React, and Next.js." />
+    <meta name="twitter:image" content="https://jawadhossainmahi.github.io/assets/preview.jpg" />
 
-<!-- Canonical URL -->
-<link rel="canonical" href="https://jawadhossainmahi.github.io/" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
 
-<!-- Theme -->
-<meta name="theme-color" content="#080c10" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500;700&display=swap"
+        rel="stylesheet" />
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://jawadhossainmahi.github.io/" />
-<meta property="og:title" content="Jawad Hossain Mahi — Full Stack Developer" />
-<meta property="og:description"
-    content="Building scalable web applications with Laravel, React, Next.js, and modern technologies." />
+    <link rel="stylesheet" href="css/main.css" />
 
-<!-- IMPORTANT: Replace with your real uploaded image -->
-<meta property="og:image" content="https://jawadhossainmahi.github.io/assets/preview.jpg" />
+    <!-- Avoid a light-mode flash: apply saved/system theme before first paint. -->
+    <script>
+        (function () {
+            var saved = localStorage.getItem("theme");
+            var theme = saved || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+            document.documentElement.setAttribute("data-theme", theme);
+        })();
+    </script>
 
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:site_name" content="Jawad Hossain Mahi Portfolio" />
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:url" content="https://jawadhossainmahi.github.io/" />
-<meta name="twitter:title" content="Jawad Hossain Mahi — Full Stack Developer" />
-<meta name="twitter:description"
-    content="Full Stack Developer building scalable apps using Laravel, React, and modern web technologies." />
-
-<meta name="twitter:image" content="https://jawadhossainmahi.github.io/assets/preview.jpg" />
-
-<!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
-<link rel="manifest" href="/favicon/manifest.json">
-
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
-    rel="stylesheet" />
-
-<script>
-    tailwind.config = {
-        darkMode: 'class',
-        theme: {
-            extend: {
-                fontFamily: {
-                    display: ['Syne', 'sans-serif'],
-                    mono: ['Space Mono', 'monospace'],
-                    body: ['DM Sans', 'sans-serif'],
-                },
-                colors: {
-                    bg: '#080c10', surface: '#0d1117', card: '#111827',
-                    border: '#1f2937', accent: '#00d4aa', accent2: '#6366f1',
-                    muted: '#6b7280', text: '#e2e8f0', subtle: '#94a3b8',
-                }
-            }
-        }
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jawad Hossain Mahi",
+        "jobTitle": "Full Stack Developer",
+        "url": "https://jawadhossainmahi.github.io/",
+        "sameAs": [
+            "https://github.com/jawadhossainmahi",
+            "https://www.linkedin.com/in/jawadhossainmahi/"
+        ],
+        "worksFor": { "@type": "Organization", "name": "Webshinez Technologies" }
     }
-</script>
-
-<style>
-    *,
-    *::before,
-    *::after {
-        box-sizing: border-box;
-    }
-
-    html {
-        background: #080c10;
-        cursor: none;
-    }
-
-    body {
-        font-family: 'DM Sans', sans-serif;
-        background: #080c10;
-        color: #e2e8f0;
-        overflow-x: hidden;
-        cursor: none;
-    }
-
-    /* ─── CUSTOM CURSOR ─── */
-    #cursor-dot {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 8px;
-        height: 8px;
-        background: #00d4aa;
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9999;
-        transform: translate(-50%, -50%);
-        transition: transform 0.1s ease, background 0.3s ease;
-        mix-blend-mode: difference;
-    }
-
-    #cursor-ring {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 36px;
-        height: 36px;
-        border: 1.5px solid rgba(0, 212, 170, 0.6);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9998;
-        transform: translate(-50%, -50%);
-        transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
-    }
-
-    #cursor-ring.hovering {
-        width: 56px;
-        height: 56px;
-        border-color: rgba(99, 102, 241, 0.8);
-    }
-
-    #cursor-ring.clicking {
-        width: 20px;
-        height: 20px;
-    }
-
-    /* ─── MAGNETIC CURSOR TRAIL ─── */
-    .cursor-trail {
-        position: fixed;
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
-        background: #00d4aa;
-        pointer-events: none;
-        z-index: 9997;
-        opacity: 0;
-        transform: translate(-50%, -50%);
-    }
-
-    ::-webkit-scrollbar {
-        width: 4px;
-    }
-
-    ::-webkit-scrollbar-track {
-        background: #080c10;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: #00d4aa;
-        border-radius: 2px;
-    }
-
-    .hero-bg {
-        background:
-            radial-gradient(ellipse at 20% 50%, rgba(0, 212, 170, 0.07) 0%, transparent 60%),
-            radial-gradient(ellipse at 80% 20%, rgba(99, 102, 241, 0.07) 0%, transparent 60%),
-            #080c10;
-    }
-
-    /* Noise overlay */
-    body::before {
-        content: '';
-        position: fixed;
-        inset: 0;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-        pointer-events: none;
-        z-index: 1;
-        opacity: 0.35;
-    }
-
-    /* Grid bg */
-    .grid-bg {
-        background-image:
-            linear-gradient(rgba(0, 212, 170, 0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0, 212, 170, 0.03) 1px, transparent 1px);
-        background-size: 44px 44px;
-    }
-
-    /* Glow effect behind elements */
-    .glow-accent {
-        box-shadow: 0 0 40px rgba(0, 212, 170, 0.15);
-    }
-
-    .glow-accent2 {
-        box-shadow: 0 0 40px rgba(99, 102, 241, 0.15);
-    }
-
-    /* Nav link */
-    .nav-link {
-        position: relative;
-        font-family: 'Space Mono', monospace;
-        font-size: 12px;
-        color: #94a3b8;
-        transition: color 0.3s;
-        letter-spacing: 0.05em;
-    }
-
-    .nav-link::after {
-        content: '';
-        position: absolute;
-        bottom: -3px;
-        left: 0;
-        width: 0;
-        height: 1px;
-        background: #00d4aa;
-        transition: width 0.35s ease;
-    }
-
-    .nav-link:hover,
-    .nav-link.active {
-        color: #00d4aa;
-    }
-
-    .nav-link:hover::after,
-    .nav-link.active::after {
-        width: 100%;
-    }
-
-    /* Photo ring */
-    .photo-ring {
-        background: conic-gradient(#00d4aa 0deg, #6366f1 180deg, #00d4aa 360deg);
-        animation: spin 7s linear infinite;
-    }
-
-    @keyframes spin {
-        to {
-            transform: rotate(360deg);
-        }
-    }
-
-    /* Typewriter cursor */
-    #typewriter::after {
-        content: '|';
-        animation: blink 1s step-end infinite;
-        color: #00d4aa;
-    }
-
-    @keyframes blink {
-
-        0%,
-        100% {
-            opacity: 1
-        }
-
-        50% {
-            opacity: 0
-        }
-    }
-
-    /* Float animation */
-    @keyframes float {
-
-        0%,
-        100% {
-            transform: translateY(0)
-        }
-
-        50% {
-            transform: translateY(-14px)
-        }
-    }
-
-    .float-anim {
-        animation: float 5s ease-in-out infinite;
-    }
-
-    /* Skill bar */
-    .skill-bar-fill {
-        background: linear-gradient(90deg, #00d4aa, #6366f1);
-        height: 3px;
-        border-radius: 2px;
-        width: 0;
-        transition: width 1.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    /* Card hover */
-    .card-glow {
-        transition: all 0.35s ease;
-        border: 1px solid #1f2937;
-    }
-
-    .card-glow:hover {
-        border-color: rgba(0, 212, 170, 0.3);
-        box-shadow: 0 0 40px rgba(0, 212, 170, 0.07), 0 12px 40px rgba(0, 0, 0, 0.5);
-        transform: translateY(-5px);
-    }
-
-    /* Tag pill */
-    .tag-pill {
-        background: rgba(0, 212, 170, 0.08);
-        border: 1px solid rgba(0, 212, 170, 0.22);
-        color: #00d4aa;
-        font-family: 'Space Mono', monospace;
-        font-size: 10px;
-        padding: 3px 10px;
-        border-radius: 999px;
-        letter-spacing: 0.04em;
-    }
-
-    /* Timeline */
-    .timeline-line {
-        background: linear-gradient(180deg, #00d4aa 0%, #6366f1 100%);
-        width: 2px;
-    }
-
-    /* Shimmer */
-    .shimmer-box {
-        background: linear-gradient(90deg, #111827 25%, #1f2937 50%, #111827 75%);
-        background-size: 200% 100%;
-        animation: shimmer 1.6s infinite;
-    }
-
-    @keyframes shimmer {
-        0% {
-            background-position: -200% 0
-        }
-
-        100% {
-            background-position: 200% 0
-        }
-    }
-
-    /* Section reveal (GSAP handles this; initial state) */
-    .gsap-reveal {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-
-    /* Blog card hover lift */
-    .blog-card {
-        cursor: none;
-    }
-
-    /* Blog / modal prose */
-    .prose-dark h1,
-    .prose-dark h2,
-    .prose-dark h3 {
-        color: #e2e8f0;
-        font-family: 'Syne', sans-serif;
-        margin: 1.2em 0 0.5em;
-    }
-
-    .prose-dark h2 {
-        font-size: 1.4rem;
-    }
-
-    .prose-dark p {
-        color: #94a3b8;
-        line-height: 1.85;
-        margin-bottom: 1rem;
-    }
-
-    .prose-dark code {
-        background: #1f2937;
-        color: #00d4aa;
-        padding: 2px 6px;
-        border-radius: 4px;
-        font-family: 'Space Mono', monospace;
-        font-size: 12px;
-    }
-
-    .prose-dark pre {
-        background: #0d1117 !important;
-        border: 1px solid #1f2937;
-        border-radius: 10px;
-        overflow-x: auto;
-        padding: 1.2rem;
-        margin: 1rem 0;
-    }
-
-    .prose-dark pre code {
-        background: transparent;
-        padding: 0;
-    }
-
-    .prose-dark ul,
-    .prose-dark ol {
-        color: #94a3b8;
-        padding-left: 1.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .prose-dark li {
-        margin-bottom: 0.4rem;
-    }
-
-    .prose-dark strong {
-        color: #e2e8f0;
-    }
-
-    .prose-dark a {
-        color: #00d4aa;
-        text-decoration: underline;
-        text-underline-offset: 3px;
-    }
-
-    .prose-dark blockquote {
-        border-left: 3px solid #00d4aa;
-        padding-left: 1rem;
-        color: #6b7280;
-        margin: 1rem 0;
-        font-style: italic;
-    }
-
-    /* Modal open/close animation */
-    #blog-modal {
-        transition: opacity 0.25s ease;
-    }
-
-    #blog-modal.hidden-modal {
-        opacity: 0;
-        pointer-events: none;
-    }
-
-    #modal-inner {
-        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
-    }
-
-    #blog-modal.hidden-modal #modal-inner {
-        transform: scale(0.93) translateY(20px);
-        opacity: 0;
-    }
-
-    /* Floating dots */
-    .dot {
-        position: absolute;
-        border-radius: 50%;
-    }
-
-    /* Mobile menu */
-    #mobile-menu {
-        display: none;
-    }
-
-    #mobile-menu.open {
-        display: flex;
-    }
-
-    /* Hover magnetic element */
-    .magnetic {
-        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-</style>
+    </script>
 </head>
 
-<body class="dark">
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
 
-    <!-- ─── CURSOR ─── -->
-    <div id="cursor-dot"></div>
-    <div id="cursor-ring"></div>
+    <!-- Cursor (desktop only, gated in JS) -->
+    <canvas id="cursor-canvas" aria-hidden="true"></canvas>
+    <div id="cursor-dot" aria-hidden="true"></div>
+    <div id="cursor-ring" aria-hidden="true"></div>
 
-    <!-- ─── NAVBAR ─── -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="#home" class="font-mono text-accent font-bold text-base tracking-tight magnetic" id="logo-link">
-                <span class="text-subtle">&lt;</span><span id="nav-name">JHM</span><span
-                    class="text-subtle">/&gt;</span>
-            </a>
-            <div class="hidden md:flex items-center gap-8" id="nav-links">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
+    <!-- Ambient background -->
+    <div class="bg-field" aria-hidden="true">
+        <div class="aurora-sweep"></div>
+        <div class="orb orb-a"></div>
+        <div class="orb orb-b"></div>
+        <div class="orb orb-c"></div>
+    </div>
+    <div class="grain-overlay" aria-hidden="true"></div>
+
+    <!-- Navbar -->
+    <header id="navbar" class="navbar">
+        <div class="navbar-inner">
+            <a href="#top" class="logo"><span class="dim">&lt;</span>JHM<span class="dim">/&gt;</span></a>
+            <nav class="nav-links" aria-label="Primary">
+                <a href="#work" class="nav-link">Work</a>
                 <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#community" class="nav-link">Community</a>
+                <a href="#about" class="nav-link">About</a>
                 <a href="#blog" class="nav-link">Blog</a>
                 <a href="#contact" class="nav-link">Contact</a>
-                <!-- <a href="blogs.html" class="nav-link">All Blogs ↗</a> -->
-            </div>
-            <div class="flex items-center gap-4">
-                <a id="nav-github" href="#" target="_blank"
-                    class="hidden md:flex items-center gap-2 text-xs font-mono border border-accent text-accent px-4 py-2 rounded hover:bg-accent hover:text-bg transition-all duration-300 magnetic">
-                    GitHub <span class="text-subtle">↗</span>
-                </a>
-                <button id="hamburger" class="md:hidden text-subtle hover:text-accent transition-colors p-1">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
+            </nav>
+            <div class="navbar-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
+                    <svg class="icon-moon" width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+                    <svg class="icon-sun" width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" stroke-width="2"/><path stroke-linecap="round" stroke-width="2" d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                </button>
+                <a href="Jawad_Hossain_Mahi_Resume.pdf" download class="btn resume-link magnetic">Resume ⭳</a>
+                <a href="https://github.com/jawadhossainmahi" target="_blank" rel="noreferrer" class="btn btn-outline magnetic">GitHub ↗</a>
+                <button id="hamburger" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 </button>
             </div>
         </div>
-        <div id="mobile-menu" class="flex-col md:hidden bg-surface border-t border-border px-6 py-4 gap-4">
-            <a href="#home" class="nav-link py-2">Home</a>
-            <a href="#about" class="nav-link py-2">About</a>
-            <a href="#skills" class="nav-link py-2">Skills</a>
-            <a href="#projects" class="nav-link py-2">Projects</a>
-            <a href="#blog" class="nav-link py-2">Blog</a>
-            <a href="#contact" class="nav-link py-2">Contact</a>
-            <!-- <a href="blogs.html" class="nav-link py-2">All Blogs ↗</a> -->
+    </header>
+
+    <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile">
+        <div class="mobile-menu-inner">
+            <a href="#work">Work</a>
+            <a href="#skills">Skills</a>
+            <a href="#community">Community</a>
+            <a href="#about">About</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+            <a href="Jawad_Hossain_Mahi_Resume.pdf" download class="btn btn-primary resume-link">Download Resume ⭳</a>
         </div>
     </nav>
 
-    <!-- ─── HERO ─── -->
-    <section id="home" class="hero-bg grid-bg min-h-screen flex items-center relative overflow-hidden pt-20">
-        <div class="dot w-72 h-72 bg-accent/5 blur-3xl" style="top:8%;left:3%;animation:float 7s ease-in-out infinite;">
-        </div>
-        <div class="dot w-56 h-56 bg-accent2/5 blur-3xl"
-            style="bottom:18%;right:8%;animation:float 9s ease-in-out 2s infinite;"></div>
-        <div class="dot w-36 h-36 bg-accent/3 blur-2xl"
-            style="top:45%;right:22%;animation:float 6s ease-in-out 1s infinite;"></div>
-
-        <div class="max-w-6xl mx-auto px-6 py-20 relative z-10 w-full">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-
-                <!-- Left -->
+    <main id="main">
+        <!-- Hero -->
+        <section id="top" class="hero hero-grid">
+            <div class="hero-glow" aria-hidden="true"></div>
+            <div class="hero-inner">
                 <div>
-                    <div id="hero-status"
-                        class="inline-flex items-center gap-2 bg-accent/10 border border-accent/25 rounded-full px-4 py-1.5 mb-8 opacity-0">
-                        <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-                        <span class="text-accent font-mono text-xs" id="hero-available-text"></span>
+                    <div id="hero-badge" class="hero-badge" hidden>
+                        <span class="pulse-dot"></span>
+                        <span id="hero-badge-text"></span>
                     </div>
 
-                    <h1 id="hero-name"
-                        class="font-display text-5xl lg:text-7xl font-extrabold leading-none mb-4 opacity-0"></h1>
+                    <h1 id="hero-name">Jawad Hossain Mahi</h1>
 
-                    <div class="flex items-center gap-2 font-mono text-subtle text-sm mb-6 opacity-0" id="hero-tw-wrap">
-                        <span class="text-accent2">&gt;</span>
-                        <span id="typewriter"></span>
-                    </div>
+                    <div id="hero-rest" style="opacity:0">
+                        <p class="hero-role"><span class="prompt">&gt;</span> <span id="hero-role-text"></span></p>
+                        <p id="hero-tagline" class="hero-tagline"></p>
 
-                    <p id="hero-bio" class="text-subtle text-base leading-relaxed max-w-md mb-10 opacity-0"></p>
-
-                    <div id="hero-cta" class="flex flex-wrap gap-4 opacity-0">
-                        <a href="#projects"
-                            class="bg-accent text-bg font-display font-bold px-7 py-3 rounded-lg hover:bg-accent/90 transition-all duration-300 hover:shadow-lg hover:shadow-accent/25 hover:-translate-y-0.5 magnetic">
-                            View Work
-                        </a>
-                        <a href="#contact"
-                            class="border border-border text-text font-mono px-7 py-3 rounded-lg hover:border-accent hover:text-accent transition-all duration-300 magnetic">
-                            Hire Me
-                        </a>
-                    </div>
-
-                    <div id="hero-socials" class="flex gap-5 mt-10 opacity-0"></div>
-                </div>
-
-                <!-- Right: Photo -->
-                <div class="flex justify-center lg:justify-end opacity-0" id="hero-photo-wrap">
-                    <div class="relative float-anim">
-                        <div class="photo-ring absolute -inset-1.5 rounded-full opacity-60 blur-sm"></div>
-                        <div
-                            class="relative w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-2 border-surface">
-                            <img src="jawad.jpg" alt="Jawad Hossain Mahi"
-                                class="w-full h-full object-cover object-top" />
+                        <div class="hero-actions">
+                            <a href="#work" class="btn btn-primary magnetic">View My Work</a>
+                            <a href="#contact" class="btn magnetic">Get In Touch</a>
+                            <a href="Jawad_Hossain_Mahi_Resume.pdf" download class="btn resume-link magnetic">Download Resume</a>
                         </div>
-                        <div id="hero-badge-exp"
-                            class="absolute -bottom-4 -right-4 bg-card border border-border rounded-lg px-4 py-2 font-mono text-xs text-accent shadow-xl">
+
+                        <div id="hero-stats" class="hero-stats"></div>
+                    </div>
+                </div>
+
+                <div class="hero-portrait">
+                    <div class="portrait-wrap">
+                        <div class="photo-ring" aria-hidden="true"></div>
+                        <div class="portrait-photo">
+                            <img src="jawad.jpg" alt="Jawad Hossain Mahi" width="320" height="320" />
                         </div>
-                        <div
-                            class="absolute -top-2 -left-6 bg-card border border-border rounded-lg px-3 py-1.5 font-mono text-xs text-accent2 shadow-xl">
-                            Full Stack</div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Stats -->
-            <div id="hero-stats"
-                class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-border/50 opacity-0"></div>
-        </div>
-    </section>
-
-    <!-- ─── ABOUT ─── -->
-    <section id="about" class="py-24 bg-surface relative">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="gsap-reveal">
-                <span class="font-mono text-accent text-sm">01. about_me</span>
-                <h2 class="font-display text-4xl font-bold text-text mt-2 mb-12">The Developer Behind The Code</h2>
-            </div>
-            <div class="grid lg:grid-cols-2 gap-16 items-start">
-                <div class="gsap-reveal">
-                    <div id="about-bio" class="space-y-4 mb-8"></div>
-                    <div id="about-tags" class="flex gap-3 flex-wrap"></div>
-                </div>
-                <div class="gsap-reveal relative pl-8">
-                    <div class="timeline-line absolute left-0 top-2 bottom-2 rounded-full"></div>
-                    <div id="timeline"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ─── SKILLS ─── -->
-    <section id="skills" class="py-24 bg-bg relative">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="gsap-reveal">
-                <span class="font-mono text-accent text-sm">02. skills</span>
-                <h2 class="font-display text-4xl font-bold text-text mt-2 mb-12">Technical Arsenal</h2>
-            </div>
-            <div id="skill-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 gsap-reveal"></div>
-            <div id="tech-tags" class="mt-10 gsap-reveal flex flex-wrap gap-3"></div>
-        </div>
-    </section>
-
-    <!-- ─── PROJECTS ─── -->
-    <section id="projects" class="py-24 bg-surface relative">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="gsap-reveal">
-                <span class="font-mono text-accent text-sm">03. projects</span>
-                <h2 class="font-display text-4xl font-bold text-text mt-2 mb-12">Selected Work</h2>
-            </div>
-            <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-            <div class="text-center mt-10 gsap-reveal">
-                <a id="gh-all-repos" href="#" target="_blank"
-                    class="inline-flex items-center gap-2 border border-border text-subtle hover:text-accent hover:border-accent font-mono text-sm px-6 py-3 rounded-lg transition-all duration-300 magnetic">
-                    View All Repositories on GitHub ↗
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ─── BLOG ─── -->
-    <section id="blog" class="py-24 bg-bg relative">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="gsap-reveal">
-                <span class="font-mono text-accent text-sm">04. blog</span>
-                <h2 class="font-display text-4xl font-bold text-text mt-2 mb-3">Thoughts & Tutorials</h2>
-                <p class="text-subtle mb-6 max-w-xl">
-                    I write about web development, frameworks, and things I learn along the way.
-                </p>
-                <!-- <a href="blogs.html"
-                    class="inline-flex items-center gap-2 text-accent font-mono text-sm hover:gap-3 transition-all duration-300 mb-12">
-                    View all posts ↗
-                </a> -->
-            </div>
-            <div id="blog-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="shimmer-box rounded-xl h-64"></div>
-                <div class="shimmer-box rounded-xl h-64"></div>
-                <div class="shimmer-box rounded-xl h-64"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ─── BLOG MODAL ─── -->
-    <div id="blog-modal"
-        class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/85 backdrop-blur-md p-4 hidden-modal">
-        <div id="modal-inner"
-            class="bg-surface border border-border rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl">
-            <div
-                class="sticky top-0 bg-surface/95 backdrop-blur-sm border-b border-border px-6 py-4 flex justify-between items-center z-10">
-                <div id="modal-tags" class="flex gap-2 flex-wrap"></div>
-                <button id="close-modal"
-                    class="w-8 h-8 rounded-full border border-border text-muted hover:text-accent hover:border-accent transition-all flex items-center justify-center font-mono text-sm">✕</button>
-            </div>
-            <div class="p-8">
-                <div id="modal-meta" class="font-mono text-subtle text-xs mb-6 flex items-center gap-3"></div>
-                <div id="modal-content" class="prose-dark"></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ─── CONTACT ─── -->
-    <section id="contact" class="py-24 bg-surface relative">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="gsap-reveal text-center max-w-2xl mx-auto mb-16">
-                <span class="font-mono text-accent text-sm">05. contact</span>
-                <h2 class="font-display text-4xl font-bold text-text mt-2 mb-4">Let's Build Together</h2>
-                <p class="text-subtle">Have a project in mind? Looking for a developer? I'm always open to new
-                    opportunities.</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-12 items-start">
-                <div class="gsap-reveal space-y-6" id="contact-info"></div>
-                <div class="gsap-reveal">
-                    <div class="bg-card border border-border rounded-xl p-8 text-center card-glow">
-                        <div class="text-5xl mb-4">👋</div>
-                        <h3 class="font-display font-bold text-text text-xl mb-3">Say Hello!</h3>
-                        <p id="contact-cta" class="text-subtle text-sm mb-8 leading-relaxed"></p>
-                        <a id="contact-li-btn" href="#" target="_blank"
-                            class="block bg-accent text-bg font-display font-bold px-6 py-3 rounded-lg hover:bg-accent/90 transition-all duration-300 hover:shadow-lg hover:shadow-accent/25 mb-3 magnetic">
-                            Message on LinkedIn
-                        </a>
-                        <a id="contact-gh-btn" href="#" target="_blank"
-                            class="block border border-border text-subtle hover:text-accent hover:border-accent font-mono text-sm px-6 py-3 rounded-lg transition-all duration-300 magnetic">
-                            View GitHub Profile
-                        </a>
+                        <div class="portrait-badge b1" id="hero-badge-exp"></div>
+                        <div class="portrait-badge b2">Full Stack</div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+            <a href="#work" class="hero-scroll" aria-label="Scroll to work">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+            </a>
+        </section>
 
-    <!-- ─── FOOTER ─── -->
-    <footer class="bg-bg border-t border-border py-10">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-            <div class="font-mono text-accent font-bold">
-                <span class="text-subtle">&lt;</span><span id="footer-name">JHM</span><span
-                    class="text-subtle">/&gt;</span>
+        <!-- Work -->
+        <section id="work" class="section section-alt">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="index">01. featured_work</span>
+                    <h2>Selected Work</h2>
+                </div>
+                <div class="card-glow flagship-card reveal" id="flagship-project"></div>
+                <div class="projects-grid" id="projects-grid"></div>
             </div>
-            <div class="text-subtle text-sm font-mono">
-                © <span id="year"></span> <span id="footer-full-name">Jawad Hossain Mahi</span> · Built with HTML,
-                Tailwind & ☕
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="index">02. tech_stack</span>
+                    <h2>Technical Arsenal</h2>
+                    <p>Full-stack from a Laravel-leaning backend to a React/Next.js frontend, with real production experience across the gaps in between.</p>
+                </div>
+                <div class="skills-grid" id="skills-grid"></div>
             </div>
-            <div id="footer-socials" class="flex gap-5"></div>
+        </section>
+
+        <!-- Community -->
+        <section id="community" class="section section-alt">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="index">03. community</span>
+                    <h2>University & Community Involvement</h2>
+                    <p>Active in campus tech leadership, not just coursework — the part of a fresher profile that's easy to skip and easy to stand out with.</p>
+                </div>
+                <div class="community-grid" id="community-grid"></div>
+                <div class="card-glow achievement-card reveal">
+                    <span class="icon">🏆</span>
+                    <span id="achievement-text" class="text"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="index">04. about_me</span>
+                    <h2>The Developer Behind The Code</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="reveal">
+                        <div id="about-bio" class="about-bio"></div>
+                        <div id="about-tags" class="about-tags"></div>
+                        <div id="about-langs" class="about-langs"></div>
+                    </div>
+                    <div class="reveal">
+                        <div id="timeline" class="timeline"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog -->
+        <section id="blog" class="section section-alt">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="index">05. writing</span>
+                    <h2>Latest Writing</h2>
+                    <p>Notes on what I'm building and learning — real-time systems, performance, and frontend craft.</p>
+                </div>
+                <div class="blog-grid" id="blog-grid"></div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="index">06. contact</span>
+                    <h2>Let's Build Together</h2>
+                    <p id="contact-cta"></p>
+                </div>
+                <div class="contact-grid">
+                    <div class="reveal">
+                        <div id="contact-info"></div>
+                        <div id="contact-social" class="social-row"></div>
+                    </div>
+                    <div class="reveal">
+                        <form id="contact-form" class="card-glow contact-form" data-email="jawadhossainmahi@gmail.com" novalidate>
+                            <div class="honeypot-field" aria-hidden="true">
+                                <label for="company">Company</label>
+                                <input type="text" id="company" name="company" tabindex="-1" autocomplete="off" />
+                            </div>
+                            <div class="form-field">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required />
+                            </div>
+                            <div class="form-field">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required />
+                            </div>
+                            <div class="form-field">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            <button id="form-submit" type="submit" class="btn btn-primary form-submit">Send Message</button>
+                            <p id="form-status" class="form-status" role="status"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-logo"><span class="dim">&lt;</span>JHM<span class="dim">/&gt;</span></div>
+            <p class="footer-copy">© <span id="year"></span> <span id="footer-year-name"></span> · Built with HTML, CSS &amp; JS</p>
+            <div id="footer-social" class="footer-social"></div>
         </div>
     </footer>
 
-    <script>
-        // ─────────────────────────────────────────────
-        //  GSAP + ScrollTrigger registration
-        // ─────────────────────────────────────────────
-        gsap.registerPlugin(ScrollTrigger);
+    <!-- Blog modal -->
+    <div id="blog-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-inner">
+            <button id="modal-close" class="modal-close" aria-label="Close">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+            <p id="modal-meta" class="modal-meta"></p>
+            <h1 id="modal-title"></h1>
+            <div id="modal-content" class="prose"></div>
+        </div>
+    </div>
 
-        // ─────────────────────────────────────────────
-        //  CUSTOM CURSOR
-        // ─────────────────────────────────────────────
-        const dot = document.getElementById('cursor-dot');
-        const ring = document.getElementById('cursor-ring');
-        let mx = window.innerWidth / 2, my = window.innerHeight / 2;
-        let rx = mx, ry = my;
-
-        document.addEventListener('mousemove', e => {
-            mx = e.clientX; my = e.clientY;
-            gsap.to(dot, { x: mx, y: my, duration: 0.08, ease: 'none' });
-        });
-
-        // Ring follows with lag
-        gsap.ticker.add(() => {
-            rx += (mx - rx) * 0.12;
-            ry += (my - ry) * 0.12;
-            gsap.set(ring, { x: rx, y: ry });
-        });
-
-        // Hover state
-        document.addEventListener('mouseover', e => {
-            if (e.target.closest('a, button, .blog-card, .card-glow, .magnetic')) {
-                ring.classList.add('hovering');
-                gsap.to(dot, { scale: 2.5, duration: 0.3 });
-            }
-        });
-        document.addEventListener('mouseout', e => {
-            if (e.target.closest('a, button, .blog-card, .card-glow, .magnetic')) {
-                ring.classList.remove('hovering');
-                gsap.to(dot, { scale: 1, duration: 0.3 });
-            }
-        });
-        document.addEventListener('mousedown', () => ring.classList.add('clicking'));
-        document.addEventListener('mouseup', () => ring.classList.remove('clicking'));
-
-        // Cursor trail
-        const TRAIL_COUNT = 8;
-        const trails = [];
-        for (let i = 0; i < TRAIL_COUNT; i++) {
-            const el = document.createElement('div');
-            el.className = 'cursor-trail';
-            document.body.appendChild(el);
-            trails.push({ el, x: mx, y: my });
-        }
-        gsap.ticker.add(() => {
-            let lx = mx, ly = my;
-            trails.forEach((t, i) => {
-                const lag = 0.3 - i * 0.025;
-                t.x += (lx - t.x) * lag;
-                t.y += (ly - t.y) * lag;
-                const alpha = (TRAIL_COUNT - i) / TRAIL_COUNT * 0.4;
-                const scale = (TRAIL_COUNT - i) / TRAIL_COUNT;
-                gsap.set(t.el, { x: t.x, y: t.y, opacity: alpha, scale, display: 'block' });
-                lx = t.x; ly = t.y;
-            });
-        });
-
-        // ─────────────────────────────────────────────
-        //  MAGNETIC ELEMENTS
-        // ─────────────────────────────────────────────
-        function initMagnetic() {
-            document.querySelectorAll('.magnetic').forEach(el => {
-                el.addEventListener('mousemove', e => {
-                    const r = el.getBoundingClientRect();
-                    const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
-                    const dx = (e.clientX - cx) * 0.3, dy = (e.clientY - cy) * 0.3;
-                    gsap.to(el, { x: dx, y: dy, duration: 0.4, ease: 'power2.out' });
-                });
-                el.addEventListener('mouseleave', () => {
-                    gsap.to(el, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1, 0.4)' });
-                });
-            });
-        }
-
-        // ─────────────────────────────────────────────
-        //  NAVBAR scroll
-        // ─────────────────────────────────────────────
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('navbar');
-            if (window.scrollY > 60) {
-                nav.classList.add('bg-surface/95', 'backdrop-blur-md', 'border-b', 'border-border', 'shadow-xl');
-            } else {
-                nav.classList.remove('bg-surface/95', 'backdrop-blur-md', 'border-b', 'border-border', 'shadow-xl');
-            }
-        });
-
-        // Active nav
-        const sections = ['home', 'about', 'skills', 'projects', 'blog', 'contact'];
-        window.addEventListener('scroll', () => {
-            const y = window.scrollY + 120;
-            sections.forEach(id => {
-                const el = document.getElementById(id);
-                if (el && y >= el.offsetTop && y < el.offsetTop + el.offsetHeight) {
-                    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-                    document.querySelectorAll(`.nav-link[href="#${id}"]`).forEach(l => l.classList.add('active'));
-                }
-            });
-        });
-
-        // Hamburger
-        document.getElementById('hamburger').addEventListener('click', () => {
-            document.getElementById('mobile-menu').classList.toggle('open');
-        });
-        document.querySelectorAll('#mobile-menu a').forEach(a => {
-            a.addEventListener('click', () => document.getElementById('mobile-menu').classList.remove('open'));
-        });
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', e => {
-                const t = document.querySelector(a.getAttribute('href'));
-                if (t) { e.preventDefault(); window.scrollTo({ top: t.offsetTop - 70, behavior: 'smooth' }); }
-            });
-        });
-
-        // Year
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // ─────────────────────────────────────────────
-        //  LOAD DATA.JSON + RENDER EVERYTHING
-        // ─────────────────────────────────────────────
-        fetch('data.json')
-            .then(r => r.json())
-            .then(data => {
-                renderMeta(data);
-                renderHero(data);
-                renderAbout(data);
-                renderSkills(data);
-                renderProjects(data);
-                renderContact(data);
-                initTypewriter(data.typewriter);
-                initHeroAnimations();
-                initScrollAnimations();
-                initMagnetic();
-            });
-
-        // ─── RENDER FUNCTIONS ───
-
-        function renderMeta(d) {
-            document.title = `${d.meta.name} — ${d.meta.title}`;
-            document.querySelector('meta[name="description"]').content = d.meta.tagline;
-            document.getElementById('footer-name').textContent = d.meta.name.split(' ').map(w => w[0]).join('');
-            document.getElementById('footer-full-name').textContent = d.meta.name;
-        }
-
-        function renderHero(d) {
-            const m = d.meta;
-            if (m.available) {
-                document.getElementById('hero-status').style.display = 'inline-flex';
-                document.getElementById('hero-available-text').textContent = m.availableText;
-            }
-
-            // Name split for GSAP
-            const [first, ...rest] = m.name.split(' ');
-            const last = rest.pop();
-            document.getElementById('hero-name').innerHTML =
-                `<span class="text-text">${first}</span><br>` +
-                (rest.length ? `<span class="text-accent">${rest.join(' ')}</span><br>` : '') +
-                `<span class="text-subtle text-4xl lg:text-5xl font-semibold">${last}</span>`;
-
-            document.getElementById('hero-bio').textContent = d.meta.tagline;
-
-            // Socials
-            const soc = document.getElementById('hero-socials');
-            d.social.forEach(s => {
-                soc.innerHTML += `<a href="${s.url}" target="_blank" class="text-muted hover:text-accent transition-colors text-sm font-mono magnetic">${s.short} ↗</a>`;
-            });
-
-            // Nav & footer GitHub link
-            const gh = d.social.find(s => s.short === 'GH');
-            if (gh) {
-                document.getElementById('nav-github').href = gh.url;
-                document.getElementById('gh-all-repos').href = gh.url + '?tab=repositories';
-            }
-            const li = d.social.find(s => s.short === 'LI');
-            if (li) document.getElementById('contact-li-btn').href = li.url;
-            if (gh) document.getElementById('contact-gh-btn').href = gh.url;
-
-            // Footer socials
-            const fs = document.getElementById('footer-socials');
-            d.social.slice(0, 3).forEach(s => {
-                fs.innerHTML += `<a href="${s.url}" target="_blank" class="text-muted hover:text-accent font-mono text-sm transition-colors">${s.short}</a>`;
-            });
-
-            // Badge
-            document.getElementById('hero-badge-exp').textContent = m.yearsExp + ' yrs exp';
-
-            // Stats
-            const stats = [
-                { val: m.yearsExp, label: 'Years Exp' },
-                { val: m.projects, label: 'Projects' },
-                { val: m.frameworks, label: 'Frameworks' },
-                { val: m.cgpa, label: 'CGPA' },
-            ];
-            const sg = document.getElementById('hero-stats');
-            stats.forEach(s => {
-                sg.innerHTML += `<div class="text-center"><div class="font-display text-3xl font-extrabold text-accent">${s.val}</div><div class="text-subtle text-sm mt-1 font-mono">${s.label}</div></div>`;
-            });
-        }
-
-        function renderAbout(d) {
-            const bio = document.getElementById('about-bio');
-            d.bio.forEach(p => { bio.innerHTML += `<p class="text-subtle leading-relaxed">${p}</p>`; });
-
-            const tags = document.getElementById('about-tags');
-            d.tags.forEach(t => { tags.innerHTML += `<span class="tag-pill">${t}</span>`; });
-
-            const tl = document.getElementById('timeline');
-            d.timeline.forEach(item => {
-                const colorMap = { accent: '#00d4aa', accent2: '#6366f1', border: '#1f2937' };
-                const col = colorMap[item.color] || colorMap.border;
-                const shadowCol = item.color === 'accent' ? 'rgba(0,212,170,0.5)' : item.color === 'accent2' ? 'rgba(99,102,241,0.5)' : 'none';
-                const textCol = item.color === 'accent' ? 'text-accent' : item.color === 'accent2' ? 'text-accent2' : 'text-subtle';
-                tl.innerHTML += `
-        <div class="mb-8 relative">
-          <div class="absolute -left-10 top-1 w-4 h-4 rounded-full border-2 border-surface shadow-lg" style="background:${col};box-shadow:0 0 10px ${shadowCol};"></div>
-          <div class="font-mono ${textCol} text-xs mb-1">${item.period}</div>
-          <div class="font-display font-bold text-text">${item.role}</div>
-          <div class="text-subtle text-sm">${item.org}</div>
-          ${item.desc ? `<p class="text-subtle text-sm mt-2 leading-relaxed">${item.desc}</p>` : ''}
-        </div>`;
-            });
-        }
-
-        function renderSkills(d) {
-            const sg = document.getElementById('skill-grid');
-            const colorMap = { accent: 'accent', accent2: 'accent2', green: 'green-500' };
-
-            d.skillGroups.forEach(group => {
-                const c = colorMap[group.color] || 'accent';
-                const skillsHtml = group.skills.map(s => `
-        <div>
-          <div class="flex justify-between text-sm mb-1.5">
-            <span class="text-subtle">${s.name}</span>
-            <span class="font-mono text-accent text-xs">${s.pct}%</span>
-          </div>
-          <div class="bg-border h-0.5 rounded-full">
-            <div class="skill-bar-fill" data-width="${s.pct}"></div>
-          </div>
-        </div>`).join('');
-
-                sg.innerHTML += `
-        <div class="card-glow bg-card rounded-xl p-6">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="w-10 h-10 rounded-lg bg-${c}/10 flex items-center justify-center text-xl">${group.icon}</div>
-            <div class="font-display font-bold text-text">${group.label}</div>
-          </div>
-          <div class="space-y-4">${skillsHtml}</div>
-        </div>`;
-            });
-
-            const tt = document.getElementById('tech-tags');
-            d.techTags.forEach(t => { tt.innerHTML += `<span class="tag-pill">${t}</span>`; });
-        }
-
-        function renderProjects(d) {
-            const pg = document.getElementById('projects-grid');
-            d.projects.forEach(p => {
-                pg.innerHTML += `
-        <div class="card-glow bg-card rounded-xl overflow-hidden gsap-reveal">
-          <div class="h-2 bg-gradient-to-r ${p.gradient}"></div>
-          <div class="p-6">
-            <div class="flex justify-between items-start mb-3">
-              <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-xl">${p.icon}</div>
-              <a href="${p.github}" target="_blank" class="text-muted hover:text-accent transition-colors font-mono text-xs">GH ↗</a>
-            </div>
-            <h3 class="font-display font-bold text-text text-lg mb-2">${p.title}</h3>
-            <p class="text-subtle text-sm leading-relaxed mb-5">${p.desc}</p>
-            <div class="flex flex-wrap gap-2">${p.tags.map(t => `<span class="tag-pill">${t}</span>`).join('')}</div>
-          </div>
-        </div>`;
-            });
-        }
-
-        function renderContact(d) {
-            const ci = document.getElementById('contact-info');
-            ci.innerHTML = `
-      <div class="card-glow bg-card rounded-xl p-6 flex items-center gap-4">
-        <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-2xl">📍</div>
-        <div><div class="text-subtle text-sm font-mono">Location</div><div class="text-text font-medium">${d.contact.location}</div></div>
-      </div>
-      <div class="card-glow bg-card rounded-xl p-6 flex items-center gap-4">
-        <div class="w-12 h-12 rounded-xl bg-accent2/10 flex items-center justify-center text-2xl">💼</div>
-        <div><div class="text-subtle text-sm font-mono">Employment</div><div class="text-text font-medium">${d.contact.employer}</div></div>
-      </div>
-      <div class="card-glow bg-card rounded-xl p-6">
-        <div class="text-subtle text-sm font-mono mb-3">Find me on</div>
-        <div id="contact-social-links" class="flex gap-4 flex-wrap"></div>
-      </div>`;
-            document.getElementById('contact-cta').textContent = d.contact.cta;
-
-            fetch('data.json').then(r => r.json()).then(data => {
-                const cl = document.getElementById('contact-social-links');
-                data.social.forEach(s => {
-                    cl.innerHTML += `<a href="${s.url}" target="_blank" class="flex items-center gap-2 text-sm text-text hover:text-accent transition-colors font-mono">${s.label} ↗</a>`;
-                });
-            });
-        }
-
-        // ─────────────────────────────────────────────
-        //  TYPEWRITER
-        // ─────────────────────────────────────────────
-        function initTypewriter(phrases) {
-            let pi = 0, ci = 0, del = false;
-            const el = document.getElementById('typewriter');
-            function type() {
-                const cur = phrases[pi];
-                if (del) ci--; else ci++;
-                el.textContent = cur.substring(0, ci);
-                let spd = del ? 55 : 95;
-                if (!del && ci === cur.length) { spd = 1800; del = true; }
-                else if (del && ci === 0) { del = false; pi = (pi + 1) % phrases.length; spd = 300; }
-                setTimeout(type, spd);
-            }
-            type();
-        }
-
-        // ─────────────────────────────────────────────
-        //  HERO GSAP INTRO
-        // ─────────────────────────────────────────────
-        function initHeroAnimations() {
-            const tl = gsap.timeline({ delay: 0.2 });
-            tl.to('#hero-status', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' })
-                .to('#hero-name', { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.3')
-                .to('#hero-tw-wrap', { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, '-=0.4')
-                .to('#hero-bio', { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, '-=0.35')
-                .to('#hero-cta', { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, '-=0.3')
-                .to('#hero-socials', { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, '-=0.3')
-                .to('#hero-photo-wrap', { opacity: 1, duration: 0.8, ease: 'power2.out' }, '-=0.6')
-                .to('#hero-stats', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.4');
-
-            // Staggered stat numbers count-up
-            gsap.from('#hero-stats > div', {
-                scrollTrigger: { trigger: '#hero-stats', start: 'top 90%' },
-                opacity: 0, y: 20, stagger: 0.12, duration: 0.6, ease: 'power3.out', delay: 0.3
-            });
-        }
-
-        // ─────────────────────────────────────────────
-        //  SCROLL ANIMATIONS
-        // ─────────────────────────────────────────────
-        function initScrollAnimations() {
-            // Generic gsap-reveal
-            gsap.utils.toArray('.gsap-reveal').forEach(el => {
-                gsap.to(el, {
-                    scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' },
-                    opacity: 1, y: 0, duration: 0.75, ease: 'power3.out'
-                });
-            });
-
-            // Skill bars on enter
-            ScrollTrigger.create({
-                trigger: '#skills',
-                start: 'top 75%',
-                onEnter: () => {
-                    document.querySelectorAll('.skill-bar-fill').forEach(bar => {
-                        setTimeout(() => { bar.style.width = bar.dataset.width + '%'; }, 300);
-                    });
-                }
-            });
-
-            // Projects stagger
-            gsap.utils.toArray('#projects-grid .card-glow').forEach((el, i) => {
-                gsap.fromTo(el,
-                    { opacity: 0, y: 50 },
-                    { scrollTrigger: { trigger: el, start: 'top 90%' }, opacity: 1, y: 0, duration: 0.65, delay: i * 0.08, ease: 'power3.out' }
-                );
-            });
-
-            // Floating background orbs parallax
-            gsap.to('.dot', {
-                scrollTrigger: { trigger: 'body', start: 'top top', end: 'bottom bottom', scrub: 1 },
-                y: '-=80', stagger: 0.3
-            });
-        }
-
-        // ─────────────────────────────────────────────
-        //  LOAD BLOG POSTS
-        // ─────────────────────────────────────────────
-        function loadBlog() {
-            fetch('blogs/posts.json')
-                .then(r => r.json())
-                .then(posts => {
-                    const grid = document.getElementById('blog-grid');
-                    grid.innerHTML = '';
-                    posts.slice(0, 3).forEach((post, i) => {
-                        const tagsHtml = post.tags.map(t => `<span class="tag-pill">${t}</span>`).join('');
-                        const card = document.createElement('div');
-                        card.className = 'card-glow bg-card rounded-xl overflow-hidden blog-card gsap-reveal';
-                        card.dataset.id = post.id;
-                        card.dataset.file = post.file;
-                        card.innerHTML = `
-            <div class="h-36 overflow-hidden relative">
-              <img src="${post.cover}" alt="${post.title}" class="w-full h-full object-cover opacity-60 hover:opacity-85 transition-opacity duration-500" />
-              <div class="absolute inset-0 bg-gradient-to-t from-card to-transparent"></div>
-              <div class="absolute top-3 right-3 bg-card/80 backdrop-blur-sm border border-border rounded-full px-3 py-1 font-mono text-xs text-subtle">${post.date}</div>
-            </div>
-            <div class="p-5">
-              <h3 class="font-display font-bold text-text text-base mb-2 leading-snug">${post.title}</h3>
-              <p class="text-subtle text-sm leading-relaxed mb-4">${post.excerpt}</p>
-              <div class="flex flex-wrap gap-2">${tagsHtml}</div>
-            </div>`;
-
-                        card.addEventListener('click', () => openModal(post));
-                        grid.appendChild(card);
-
-                        // Animate in
-                        gsap.fromTo(card,
-                            { opacity: 0, y: 40 },
-                            { scrollTrigger: { trigger: card, start: 'top 90%' }, opacity: 1, y: 0, duration: 0.6, delay: i * 0.1, ease: 'power3.out' }
-                        );
-                    });
-
-                    // Re-init cursor hover for new cards
-                    document.querySelectorAll('.blog-card').forEach(el => {
-                        el.addEventListener('mouseover', () => { ring.classList.add('hovering'); gsap.to(dot, { scale: 2.5, duration: 0.3 }); });
-                        el.addEventListener('mouseout', () => { ring.classList.remove('hovering'); gsap.to(dot, { scale: 1, duration: 0.3 }); });
-                    });
-                })
-                .catch(() => {
-                    document.getElementById('blog-grid').innerHTML = '<p class="text-subtle font-mono col-span-3">Could not load blog posts.</p>';
-                });
-        }
-
-        loadBlog();
-
-        // ─────────────────────────────────────────────
-        //  BLOG MODAL
-        // ─────────────────────────────────────────────
-        function openModal(post) {
-            const modal = document.getElementById('blog-modal');
-            const tagsHtml = post.tags.map(t => `<span class="tag-pill">${t}</span>`).join('');
-            document.getElementById('modal-tags').innerHTML = tagsHtml;
-            document.getElementById('modal-meta').innerHTML = `<span class="text-accent font-mono">📅 ${post.date}</span><span class="text-border">·</span><span>${post.tags.join(', ')}</span>`;
-            document.getElementById('modal-content').innerHTML = '<div class="shimmer-box h-64 rounded-lg"></div>';
-
-            modal.classList.remove('hidden');
-            modal.classList.remove('hidden-modal');
-            modal.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-
-            gsap.fromTo('#modal-inner',
-                { opacity: 0, scale: 0.9, y: 30 },
-                { opacity: 1, scale: 1, y: 0, duration: 0.4, ease: 'back.out(1.5)' }
-            );
-
-            fetch(post.file)
-                .then(r => r.text())
-                .then(md => {
-                    const html = marked.parse(md);
-                    document.getElementById('modal-content').innerHTML = html;
-                    hljs.highlightAll();
-                })
-                .catch(() => {
-                    document.getElementById('modal-content').innerHTML = '<p class="text-subtle">Could not load this post.</p>';
-                });
-        }
-
-        function closeModal() {
-            gsap.to('#modal-inner', {
-                opacity: 0, scale: 0.93, y: 20, duration: 0.25, ease: 'power2.in',
-                onComplete: () => {
-                    const modal = document.getElementById('blog-modal');
-                    modal.style.display = 'none';
-                    modal.classList.add('hidden-modal');
-                    document.body.style.overflow = '';
-                }
-            });
-        }
-
-        document.getElementById('close-modal').addEventListener('click', closeModal);
-        document.getElementById('blog-modal').addEventListener('click', e => {
-            if (e.target === e.currentTarget) closeModal();
-        });
-        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>

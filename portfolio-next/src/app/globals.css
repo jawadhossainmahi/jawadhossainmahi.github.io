@@ -1,0 +1,298 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #05070a;
+  --surface: #0d1117;
+  --card: #10141c;
+  --border: #1f2733;
+  --accent: #22e5ff;
+  --accent-2: #7c5cff;
+  --text: #e6edf3;
+  --subtle: #94a3b8;
+  --muted: #64748b;
+}
+
+.light {
+  --bg: #f6f8fb;
+  --surface: #ffffff;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --accent: #0891a8;
+  --accent-2: #6248e0;
+  --text: #0f172a;
+  --subtle: #475569;
+  --muted: #64748b;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-text: var(--text);
+  --color-subtle: var(--subtle);
+  --color-muted: var(--muted);
+
+  --font-display: var(--font-syne);
+  --font-mono: var(--font-space-mono);
+  --font-body: var(--font-dm-sans);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  scroll-behavior: auto;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Native cursor everywhere by default; hidden only where the spray-cursor
+   effect actually takes over (fine pointer + hover-capable + motion OK). */
+@media (pointer: fine) and (hover: hover) {
+  html.cursor-active,
+  html.cursor-active * {
+    cursor: none;
+  }
+}
+
+/* ---- Ambient animated gradient field (fixed, behind everything) ---- */
+.aurora-layer {
+  position: fixed;
+  inset: -15%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.aurora-sweep {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg,
+      color-mix(in oklab, var(--accent) 16%, transparent) 0%,
+      transparent 28%,
+      color-mix(in oklab, var(--accent-2) 14%, transparent) 52%,
+      transparent 74%,
+      color-mix(in oklab, var(--accent) 12%, transparent) 100%);
+  background-size: 200% 200%;
+  animation: aurora-drift 24s ease-in-out infinite;
+  filter: blur(70px);
+  opacity: 0.65;
+}
+
+.light .aurora-sweep {
+  opacity: 0.4;
+}
+
+@keyframes aurora-drift {
+
+  0%,
+  100% {
+    background-position: 0% 25%;
+  }
+
+  50% {
+    background-position: 100% 75%;
+  }
+}
+
+.orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(50px);
+}
+
+.orb-a {
+  width: 32vw;
+  height: 32vw;
+  left: -6vw;
+  top: 6vh;
+  background: linear-gradient(135deg, color-mix(in oklab, var(--accent) 45%, transparent), transparent 70%);
+  animation: float 9s ease-in-out infinite;
+}
+
+.orb-b {
+  width: 26vw;
+  height: 26vw;
+  right: -4vw;
+  top: 38vh;
+  background: linear-gradient(135deg, color-mix(in oklab, var(--accent-2) 40%, transparent), transparent 70%);
+  animation: float 11s ease-in-out 1.5s infinite;
+}
+
+.orb-c {
+  width: 22vw;
+  height: 22vw;
+  left: 30vw;
+  top: 80vh;
+  background: linear-gradient(135deg, color-mix(in oklab, var(--accent) 30%, transparent), transparent 70%);
+  animation: float 8s ease-in-out 0.7s infinite;
+}
+
+/* Fewer / smaller / less-blurred orbs on small screens: heavy blur() over
+   large areas is the most expensive thing here on mid-tier mobile GPUs. */
+@media (max-width: 767px) {
+  .orb {
+    filter: blur(30px);
+  }
+
+  .orb-a,
+  .orb-b {
+    width: 60vw;
+    height: 60vw;
+  }
+
+  .orb-c {
+    display: none;
+  }
+
+  .aurora-sweep {
+    filter: blur(40px);
+  }
+}
+
+/* ---- Grain / noise overlay ---- */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.light .grain-overlay {
+  opacity: 0.02;
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+/* ---- Hero decorations ---- */
+.hero-grid {
+  background-image:
+    linear-gradient(color-mix(in oklab, var(--accent) 6%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in oklab, var(--accent) 6%, transparent) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.photo-ring {
+  background: conic-gradient(var(--accent) 0deg, var(--accent-2) 180deg, var(--accent) 360deg);
+  animation: spin 7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+.float-anim {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* ---- Shared surface treatments ---- */
+
+/* Section wrappers: translucent gradient instead of flat opaque fill, so
+   the fixed aurora field reads through faintly as you scroll past. */
+.section-surface {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(180deg,
+      color-mix(in oklab, var(--surface) 93%, transparent) 0%,
+      color-mix(in oklab, var(--surface) 97%, transparent) 100%);
+}
+
+.section-bg {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(180deg,
+      color-mix(in oklab, var(--bg) 92%, transparent) 0%,
+      color-mix(in oklab, var(--bg) 97%, transparent) 100%);
+}
+
+/* Cards sit as glass over the moving background: high-opacity fill +
+   blur keeps text crisp while still letting color bleed through at the edges. */
+.card-glow {
+  position: relative;
+  z-index: 1;
+  background: color-mix(in oklab, var(--card) 88%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card-glow:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in oklab, var(--accent) 40%, var(--border));
+  box-shadow: 0 12px 40px -12px color-mix(in oklab, var(--accent) 18%, transparent);
+}
+
+.btn-gradient {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+  background-size: 160% 160%;
+  transition: background-position 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background-position: 100% 0%;
+  box-shadow: 0 8px 30px -8px color-mix(in oklab, var(--accent) 45%, transparent);
+}
+
+.tag-pill {
+  display: inline-block;
+  border-radius: 999px;
+  border: 1px solid color-mix(in oklab, var(--accent) 30%, transparent);
+  background: color-mix(in oklab, var(--accent) 8%, transparent);
+  padding: 3px 10px;
+  font-family: var(--font-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
+/* ---- Reduced motion: kill everything, instantly ---- */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

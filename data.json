@@ -1,17 +1,18 @@
 {
     "meta": {
         "name": "Jawad Hossain Mahi",
-        "title": "Full Stack Developer",
-        "tagline": "Full Stack Developer from Bangladesh. Building scalable web apps with React, Laravel, and modern tools.",
-        "logo": "<JHM/>",
-        "available": true,
-        "availableText": "Available for freelance work",
+        "role": "Full Stack Developer",
+        "tagline": "I build scalable, user-centric web apps — from a Laravel-leaning backend to a React/Next.js frontend — and ship real products, not just demos.",
         "location": "Narayanganj, Bangladesh",
-        "employer": "Webshinez Technologies",
+        "email": "jawadhossainmahi@gmail.com",
+        "phone": "+8801820245632",
+        "phoneDisplay": "+880 1820-245632",
+        "available": true,
+        "availableText": "Open to fresher / junior Full Stack roles",
         "cgpa": "3.49",
         "yearsExp": "2+",
-        "projects": "10+",
-        "frameworks": "5+"
+        "shippedProjects": "7",
+        "resumeHref": "Jawad_Hossain_Mahi_Resume.pdf"
     },
     "typewriter": [
         "Full Stack Developer",
@@ -21,9 +22,9 @@
         "Clean Code Advocate"
     ],
     "bio": [
-        "I'm a <span class=\"text-text font-medium\">Full Stack Developer</span> based in Narayanganj, Bangladesh, currently pursuing my B.Sc. in Computer Science & Engineering at Green University of Bangladesh. I build fast, scalable, and visually refined web applications from end to end.",
-        "My stack spans from <span class=\"text-accent font-mono\">React.js</span> and <span class=\"text-accent font-mono\">Tailwind CSS</span> on the frontend to <span class=\"text-accent font-mono\">Laravel</span> and <span class=\"text-accent font-mono\">CodeIgniter</span> on the backend. I enjoy the challenge of making systems that are both technically sound and great to use.",
-        "Outside work, I explore Flutter for mobile, experiment with real-time systems using WebSockets, and continuously expand my expertise in full-stack patterns and architecture."
+        "I'm a <span class=\"hl\">Full Stack Developer</span> based in Narayanganj, Bangladesh, currently in my 2nd year of a B.Sc. in Computer Science &amp; Engineering at Green University of Bangladesh. I work full-time at Webshinez Technologies while building EduSelf, a school management product I co-founded, on the side.",
+        "My day-to-day spans a <span class=\"hl-mono\">Laravel</span> and <span class=\"hl-mono\">CodeIgniter</span> backend to a <span class=\"hl-mono\">React.js</span> and <span class=\"hl-mono\">Next.js</span> frontend, styled with Tailwind CSS. I care about the full path from database schema to the pixel a user actually taps — not just one layer of it.",
+        "Outside of shipped work, I hold Data Structures &amp; Algorithms fundamentals close and put them into practice through university tech leadership — GUCC and GUBCPC — where I get to build real tools for a real community, not just solve problems in isolation."
     ],
     "tags": [
         "🇧🇩 Bangladesh",
@@ -32,233 +33,158 @@
         "⚡ Full Stack"
     ],
     "social": [
-        {
-            "label": "GitHub",
-            "short": "GH",
-            "url": "https://github.com/jawadhossainmahi"
-        },
-        {
-            "label": "LinkedIn",
-            "short": "LI",
-            "url": "https://www.linkedin.com/in/jawadhossainmahi/"
-        },
-        {
-            "label": "Facebook",
-            "short": "FB",
-            "url": "https://www.facebook.com/jawadhossainmahi/"
-        },
-        {
-            "label": "Instagram",
-            "short": "IG",
-            "url": "https://www.instagram.com/jawadhossainmahi"
-        }
+        { "label": "GitHub", "short": "GH", "url": "https://github.com/jawadhossainmahi" },
+        { "label": "LinkedIn", "short": "LI", "url": "https://www.linkedin.com/in/jawadhossainmahi/" },
+        { "label": "Facebook", "short": "FB", "url": "https://www.facebook.com/jawadhossainmahi/" },
+        { "label": "Instagram", "short": "IG", "url": "https://www.instagram.com/jawadhossainmahi" }
+    ],
+    "languages": [
+        { "name": "Bengali", "level": "Native" },
+        { "name": "English", "level": "Conversational" },
+        { "name": "Hindi", "level": "Conversational" }
     ],
     "timeline": [
         {
             "period": "2023 — Present",
             "role": "Full Stack Developer",
             "org": "Webshinez Technologies · Narayanganj",
-            "desc": "Building and maintaining production web apps. Led development of institutional platforms and LMS systems.",
+            "desc": "Developing and maintaining dynamic web applications spanning frontend (React.js/Vite) and backend (Laravel) work, ensuring efficient performance and scalability.",
             "color": "accent"
         },
         {
             "period": "2024 — 2028",
             "role": "B.Sc. Computer Science & Engineering",
             "org": "Green University of Bangladesh",
-            "desc": "CGPA: 3.44 | Currently in 2nd Year",
+            "desc": "Currently in 2nd year. CGPA: 3.49.",
             "color": "accent2"
         },
         {
             "period": "2023",
             "role": "HSC — Science",
-            "org": "Narayanganj College · GPA 4.83/5.0",
-            "desc": "",
+            "org": "Narayanganj College",
+            "desc": "GPA 4.83 / 5.0.",
             "color": "border"
         },
         {
             "period": "2021",
             "role": "SSC — Science",
-            "org": "Adarsha School · GPA 4.83/5.0",
-            "desc": "",
+            "org": "Adarsha School",
+            "desc": "GPA 4.83 / 5.0.",
             "color": "border"
         }
     ],
     "skillGroups": [
+        { "icon": "💻", "label": "Languages", "skills": ["C", "C++", "Python", "JavaScript", "PHP"] },
+        { "icon": "🎨", "label": "Frontend", "skills": ["React.js", "Next.js", "Angular.js", "Tailwind CSS", "Bootstrap", "GSAP"] },
+        { "icon": "⚙️", "label": "Backend", "skills": ["Laravel", "CodeIgniter", "FastAPI", "REST APIs"] },
+        { "icon": "🗄️", "label": "Databases & Realtime", "skills": ["MySQL", "MongoDB", "WebSockets", "Laravel Reverb"] },
+        { "icon": "🛠", "label": "Tools & Libraries", "skills": ["Git", "jQuery", "Yajra DataTable", "Axios", "AJAX", "Popper.js", "Livewire"] },
+        { "icon": "📱", "label": "Mobile", "skills": ["Flutter (basic)"] }
+    ],
+    "community": [
         {
-            "icon": "🎨",
-            "label": "Frontend",
-            "color": "accent",
-            "skills": [
-                {
-                    "name": "React.js",
-                    "pct": 90
-                },
-                {
-                    "name": "Tailwind CSS",
-                    "pct": 92
-                },
-                {
-                    "name": "JavaScript",
-                    "pct": 85
-                },
-                {
-                    "name": "GSAP Animations",
-                    "pct": 75
-                },
-                {
-                    "name": "Next.js",
-                    "pct": 70
-                }
+            "org": "GUCC",
+            "orgFull": "Green University Computer Club",
+            "role": "Programming & Development Secretary — 2026 Executive Committee",
+            "url": "https://gucc.green.edu.bd",
+            "points": [
+                "Serving on the 2026 executive committee, leading programming initiatives and maintaining the official GUCC website.",
+                "Personally built and shipped a dynamic Form Builder feature for event registrations.",
+                "Anchored the Inauguration Program and the Farewell Program on stage, and helped plan, coordinate, and volunteer across other club events."
             ]
         },
         {
-            "icon": "⚙️",
-            "label": "Backend",
-            "color": "accent2",
-            "skills": [
-                {
-                    "name": "Laravel",
-                    "pct": 88
-                },
-                {
-                    "name": "PHP",
-                    "pct": 85
-                },
-                {
-                    "name": "CodeIgniter",
-                    "pct": 80
-                },
-                {
-                    "name": "REST APIs",
-                    "pct": 85
-                },
-                {
-                    "name": "FastAPI",
-                    "pct": 65
-                }
-            ]
-        },
-        {
-            "icon": "🛠",
-            "label": "Tools & DB",
-            "color": "green",
-            "skills": [
-                {
-                    "name": "MySQL",
-                    "pct": 88
-                },
-                {
-                    "name": "Git & GitHub",
-                    "pct": 85
-                },
-                {
-                    "name": "WebSockets",
-                    "pct": 78
-                },
-                {
-                    "name": "Flutter",
-                    "pct": 65
-                },
-                {
-                    "name": "MongoDB",
-                    "pct": 60
-                }
+            "org": "GUBCPC",
+            "orgFull": "GUB Competitive Programming Community",
+            "role": "Web & Dashboard Contributor",
+            "url": "https://gubcpc.com",
+            "points": [
+                "Helped build and maintain the GUBCPC website, enhancing the UI and the backend admin dashboard.",
+                "Volunteered at community events including the July Memorial Programming Contest 2026."
             ]
         }
     ],
-    "techTags": [
-        "C / C++",
-        "Python",
-        "Angular.js",
-        "jQuery",
-        "Bootstrap",
-        "AJAX",
-        "Livewire",
-        "Axios",
-        "Popper.js",
-        "Yajra DataTable",
-        "Laravel Reverb",
-        "Swiper",
-        "Owl Carousel"
-    ],
+    "achievement": "2nd Place — Green University Inter-Department Programming Contest",
     "projects": [
         {
-            "icon": "🕌",
-            "title": "Markaj U Talimis Sunnah",
-            "desc": "Full-stack institutional website with interactive frontend. Laravel backend + Vite React with rich UI components including Swiper and Owl Carousel.",
-            "tags": [
-                "React.js",
-                "Laravel",
-                "Bootstrap",
-                "jQuery"
-            ],
-            "github": "https://github.com/jawadhossainmahi",
+            "id": "eduself",
+            "flagship": true,
+            "icon": "🎓",
+            "title": "EduSelf",
+            "role": "Founder & Full Stack Developer",
+            "team": "Built with a 2-person core dev team",
+            "desc": "A multi-school, multi-branch School Management Software product, live in production.",
+            "problem": "Institutions running academics, HRM, accounting, exams, and student portals across separate spreadsheets and disconnected tools, with no single system covering a whole school — let alone multiple branches.",
+            "solution": "Designed and built a full School Management System covering Core, HRM, Accounting, Frontend, Academic, and Exam modules with student dashboards and secure authentication. Currently developing a dynamic React + TypeScript frontend module consuming Laravel REST APIs for real-time academic, accounting, and student data with type-safe, reusable components.",
+            "tags": ["Laravel", "React.js", "TypeScript", "Bootstrap", "jQuery", "Yajra DataTable", "REST APIs"],
+            "github": "https://github.com/Eduself-V2",
+            "live": "https://eduself.top",
             "gradient": "from-accent to-accent2"
         },
         {
             "icon": "💼",
             "title": "Webshinez Technologies Website",
-            "desc": "Modern responsive company website with GSAP-powered animations, smooth scroll, and LightGallery integration for optimized media presentation.",
-            "tags": [
-                "React.js",
-                "Tailwind CSS",
-                "GSAP"
-            ],
+            "role": "Frontend Developer",
+            "desc": "The company's public-facing website — responsive, animation-rich, built for a polished first impression with GSAP and LightGallery.",
+            "tags": ["React.js", "Tailwind CSS", "GSAP", "LightGallery"],
             "github": "https://github.com/jawadhossainmahi",
-            "gradient": "from-accent2 to-purple-500"
+            "live": "https://webshinez.com/",
+            "gradient": "from-accent2 to-purple"
         },
         {
-            "icon": "🎓",
-            "title": "EduSelf LMS",
-            "desc": "Laravel-based School Management System with student dashboards, authentication, exam modules, accounting, homework, and HRM portals.",
-            "tags": [
-                "Laravel",
-                "Bootstrap",
-                "Yajra"
-            ],
-            "github": "https://github.com/Eduself-V2",
-            "gradient": "from-green-500 to-accent"
+            "icon": "🕌",
+            "title": "Markaj U Talimis Sunnah",
+            "role": "Full Stack Developer",
+            "desc": "A full-stack institutional platform with a rich, interactive frontend — Vite + React backed by a Laravel API, with Swiper and Owl Carousel.",
+            "tags": ["React.js", "Vite", "Laravel", "Bootstrap", "jQuery", "Swiper", "Owl Carousel"],
+            "github": "https://github.com/jawadhossainmahi",
+            "live": "",
+            "gradient": "from-green to-accent"
         },
         {
             "icon": "💬",
             "title": "Laravel Real-Time Chat",
+            "role": "Full Stack Developer",
             "desc": "Private chat system using Laravel 12, Livewire 3, and Laravel Reverb with live messaging, typing indicators, and WebSocket broadcasting.",
-            "tags": [
-                "Laravel",
-                "Livewire",
-                "Reverb"
-            ],
+            "tags": ["Laravel", "Livewire", "Reverb"],
             "github": "https://github.com/jawadhossainmahi/laravel-chat-system",
-            "gradient": "from-orange-500 to-red-500"
+            "live": "",
+            "gradient": "from-orange to-red"
         },
         {
             "icon": "📋",
             "title": "OMR Sheet Generator",
-            "desc": "Generate customizable OMR sheets with QR codes for smartphone scanning. Built for educational institutions requiring efficient data collection.",
-            "tags": [
-                "HTML",
-                "JavaScript",
-                "QR Code"
-            ],
+            "role": "Independent Project",
+            "desc": "Generate customizable OMR sheets with QR codes for smartphone scanning — built for institutions that need efficient data collection.",
+            "tags": ["HTML", "JavaScript", "QR Code"],
             "github": "https://github.com/jawadhossainmahi/Omr-Sheet-Generate",
-            "gradient": "from-blue-500 to-cyan-500"
+            "live": "",
+            "gradient": "from-blue to-accent"
         },
         {
             "icon": "📱",
             "title": "Flutter + FastAPI CRUD",
-            "desc": "Full-stack mobile app with Flutter frontend and FastAPI backend. Demonstrates modular CRUD patterns across mobile and Python backend.",
-            "tags": [
-                "Flutter",
-                "FastAPI",
-                "Python"
-            ],
+            "role": "Independent Project",
+            "desc": "Full-stack mobile app with a Flutter frontend and a FastAPI backend, demonstrating modular CRUD patterns across mobile and Python.",
+            "tags": ["Flutter", "FastAPI", "Python"],
             "github": "https://github.com/jawadhossainmahi/flutter-fastapi-basic-crud",
-            "gradient": "from-pink-500 to-accent2"
+            "live": "",
+            "gradient": "from-pink to-accent2"
+        },
+        {
+            "icon": "🛒",
+            "title": "Grocery Shop Management System",
+            "role": "Data Structures Course Project",
+            "desc": "Console-based inventory and order management system built entirely on singly linked lists — product CRUD, ID-based search, a cart workflow, and persistent file handling.",
+            "tags": ["C++", "Linked Lists", "File Handling"],
+            "github": "https://github.com/jawadhossainmahi/grocery_shop_management_in_cpp",
+            "live": "",
+            "gradient": "from-yellow to-orange"
         }
     ],
     "contact": {
         "location": "Narayanganj, Bangladesh",
         "employer": "Webshinez Technologies",
-        "cta": "The best way to reach me is through LinkedIn or by checking my GitHub. I'm usually pretty quick to respond!"
+        "cta": "Looking for a fresher / junior Full Stack developer, or want to talk about EduSelf? I'm always open to a conversation."
     }
 }
