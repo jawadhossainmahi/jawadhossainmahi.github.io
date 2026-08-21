@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --color-obsidian: #06070a;
+  --color-graphite: #0c1016;
+  --color-blue-graphite: #111821;
+
+  --color-mint: #7df9d3;
+  --color-violet: #7c5cff;
+  --color-sky: #38bdf8;
+  --color-lime: #c4ff4d;
+  --color-amber: #ffb86b;
+
+  --color-ice: #f4f7f5;
+  --color-steel: #8b98a7;
+
+  --animate-marquee: marquee 32s linear infinite;
+  --animate-float: float 8s ease-in-out infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-14px);
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-steel/15;
+  }
+
+  html {
+    color-scheme: dark;
+    scroll-behavior: auto;
+  }
+
+  body {
+    @apply bg-obsidian text-ice font-body antialiased;
+    font-feature-settings: "ss01" 1, "cv01" 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-mint) 30%, transparent);
+    color: var(--color-ice);
+  }
+
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-mint);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .noise {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+  }
+
+  .grid-overlay {
+    background-image:
+      linear-gradient(to right, color-mix(in srgb, var(--color-steel) 12%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in srgb, var(--color-steel) 12%, transparent) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
